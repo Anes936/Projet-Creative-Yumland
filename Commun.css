@@ -6,9 +6,10 @@ header {
     display: flex;                      /* organise les enfants (left/right) sur une ligne */
     justify-content: space-between;     /* espace la partie gauche et droite au max */
     align-items: center;                /* aligne verticalement tous les éléments au centre */
-    padding: 30px 30px;                 /* espace intérieur du header */
+    padding: 40px 40px;                 /* espace intérieur du header */
     background-color: #fbf6f2;          /* couleur de fond */
-    box-shadow: 0 2px 5px rgba(204, 112, 97, 0.56); /* ombre légère pour relief */
+    box-shadow: 0 0px 15px rgba(204, 112, 97, 0.56); /* ombre légère pour relief */
+    border-radius: 10px;
 }
 
 /* ===========================
@@ -17,7 +18,7 @@ header {
 #header-left {
     display: flex;                      /* place le panier et le formulaire sur la même ligne */
     align-items: center;                /* aligne verticalement au centre */
-    gap: 200px;                          /* espace entre panier et barre de recherche */
+    gap: 65px;                          /* espace entre panier et barre de recherche */
 }
 
 /* Panier */
@@ -71,7 +72,7 @@ header {
 
 /* Image du logo */
 #header-center img {
-    height: 105px;                        /* définit la taille du logo */
+    height: 130px;                        /* définit la taille du logo */
     width: auto;                          /* garde les proportions */
 }
 
@@ -93,4 +94,15 @@ header {
 #header-right span {
     margin: 0 3px;                       /* espace autour du séparateur / */
     color: #cc7061;                      /* même couleur que les liens */
+}
+
+footer {
+    position: relative;                 /* permet de centrer le logo avec position: absolute */
+    display: flex;                      /* organise les enfants (left/right) sur une ligne */
+    justify-content: space-between;     /* espace la partie gauche et droite au max */
+    align-items: center;                /* aligne verticalement tous les éléments au centre */
+    padding: 30px 30px;                 /* espace intérieur du header */
+    background-color: #fbf6f2;          /* couleur de fond */
+    box-shadow: 0 0px 15px rgba(204, 112, 97, 0.56); /* ombre légère pour relief */
+    border-radius: 10px;
 }
