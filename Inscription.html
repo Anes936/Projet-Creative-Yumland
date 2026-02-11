@@ -1,15 +1,46 @@
-<html>
+html>
     <head>
-        <link rel="stylsheet" type="text/css" href="Inscription.html"/>
+        <link rel="stylesheet" type="text/css" href="Inscription.css"/>
+        <link rel="stylesheet" href="header.css">
         <title>Page d'Inscription</title>
     </head>
 
-    <body>
-        <main>
-              <h1>Inscription</h1>
+<body>
 
-            <form>
+<header>
+    
+    <div id="header-left">
+        <a href="Panier.html" id="panier">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4VwnUaVMSQhSC6RSWMwSH47j8AubSHlaEw&s" alt="Panier" >
+        </a>
+        <form>
+            <label for="recherche"></label>
+            <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
+            <button>
+                <img src="https://media.istockphoto.com/id/1151843591/fr/vectoriel/ic%C3%B4ne-de-signe-de-loupe-dans-le-style-transparent-illustration-vectorielle-de-loupe-sur.jpg?s=612x612&w=0&k=20&c=vbHMwPIqfB8VcOGZ_XCYcB-DiNRd-bc1VYhD6YAxz30="/>
+            </button>
+        </form>
+    </div>
 
+    <div id="header-center">
+        <a href="Acceuil.html">
+            <img src="Glogo.png" alt="Logo" >
+        </a>
+    </div>
+
+    <div id="header-right">
+        <a href="Connexion.html">Se connecter</a><span>/</span>
+        <a href="Inscription.html">S'inscrire</a>
+    </div>
+
+</header>
+
+
+<main>
+
+    <h1>Inscription</h1>
+
+    <form>
         <label for="nom"></label>
         <input type="text" id="nom" required placeholder="Nom"><br/>
 
@@ -40,20 +71,21 @@
         <label for="id"></label>
         <input type="text" id="id" required placeholder="Nom d'utilisateur"><br/>
 
-         <label for="cfmdp"></label>
-        <input type="password" id="cfmdp" required placeholder="Entrer un mot de passe"><br/>
+         <label for="emdp"></label>
+        <input type="password" id="emdp" required placeholder="Entrer un mot de passe"><br/>
 
-         <label for="cfmdp"></label>
-        <input type="password" id="cfmdp" required placeholder="Confirmer le mot de passe"><br/>
+         <label for="cmdp"></label>
+        <input type="password" id="cmdp" required placeholder="Confirmer le mot de passe"><br/>
 
         <label for="entrer"></label>
         <input type="submit" id="entrer" value="S'inscrire"/><br/>
 
+    </form>
+
+
         <a href="Connexion.html" id="dejacompte">Vous avez deja un compte? Cliquez ici pour vous connecter</a>
         
-            </form>
-        </main>
+</main>
 
-
-    </body>
+</body>
 </html>
