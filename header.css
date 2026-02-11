@@ -1,0 +1,96 @@
+/* ===========================
+   1️⃣ Style général du header
+   =========================== */
+header {
+    position: relative;                 /* permet de centrer le logo avec position: absolute */
+    display: flex;                      /* organise les enfants (left/right) sur une ligne */
+    justify-content: space-between;     /* espace la partie gauche et droite au max */
+    align-items: center;                /* aligne verticalement tous les éléments au centre */
+    padding: 30px 30px;                 /* espace intérieur du header */
+    background-color: #fbf6f2;          /* couleur de fond */
+    box-shadow: 0 2px 5px rgba(204, 112, 97, 0.56); /* ombre légère pour relief */
+}
+
+/* ===========================
+   2️⃣ Partie gauche : panier + recherche
+   =========================== */
+#header-left {
+    display: flex;                      /* place le panier et le formulaire sur la même ligne */
+    align-items: center;                /* aligne verticalement au centre */
+    gap: 200px;                          /* espace entre panier et barre de recherche */
+}
+
+/* Panier */
+#panier img {
+    width: 50px;                        /* largeur du panier */
+    height: 50px;                       /* hauteur du panier */
+    cursor: pointer;
+    gap: 300px;                    /* curseur main pour montrer que c’est cliquable */
+}
+
+/* Formulaire de recherche */
+#header-left form {
+    display: flex;                      /* place le champ texte et le bouton sur la même ligne */
+    align-items: center;                /* centre verticalement les éléments à l’intérieur */
+    border: 1px solid #cc7061;          /* contour du champ de recherche */
+    border-radius: 20px;                 /* coins arrondis */
+    overflow: hidden;                    /* empêche le bouton/loupe de dépasser */
+}
+
+/* Champ de recherche */
+#header-left input[type="text"] {
+    background-color: #fbf6f2;          /* même couleur que le header pour se fondre dedans */
+    border: none;                        /* pas de contour supplémentaire */
+    padding: 5px 10px;                   /* espace interne dans le champ */
+    outline: none;                        /* enlève le contour bleu au focus */
+    width: 200px;                         /* largeur fixe pour ne pas pousser le logo */
+}
+
+/* Bouton du formulaire (loupe) */
+#header-left button {
+    background: none;                    /* pas de fond */
+    border: none;                        /* pas de bordure */
+    cursor: pointer;                     /* main pour indiquer clic possible */
+    padding: 5px 10px;                   /* espace interne du bouton */
+}
+
+/* Image de la loupe */
+#header-left button img {
+    width: 15px;                         /* taille de la loupe */
+    height: 15px;
+}
+
+/* ===========================
+   3️⃣ Partie centre : logo
+   =========================== */
+#header-center {
+    position: absolute;                  /* sort le logo du flux flex pour le centrer */
+    left: 50%;                            /* position horizontale au centre */
+    transform: translateX(-50%);         /* ajuste pour centrer exactement l’image */
+}
+
+/* Image du logo */
+#header-center img {
+    height: 105px;                        /* définit la taille du logo */
+    width: auto;                          /* garde les proportions */
+}
+
+/* ===========================
+   4️⃣ Partie droite : connexion / inscription
+   =========================== */
+#header-right a {
+    margin: 0 5px;                       /* espace entre les liens */
+    text-decoration: none;               /* enlève le soulignement */
+    color: #cc7061;                      /* couleur du texte */
+    font-weight: bold;                    /* texte en gras */
+}
+
+#header-right a:hover {
+    text-decoration: underline;
+    color: #cc7061;
+}
+/* Séparateur entre les liens */
+#header-right span {
+    margin: 0 3px;                       /* espace autour du séparateur / */
+    color: #cc7061;                      /* même couleur que les liens */
+}
