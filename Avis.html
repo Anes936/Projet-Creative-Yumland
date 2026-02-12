@@ -1,0 +1,86 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="Commun.css">
+        <link rel="stylesheet" type="text/css" href="Avis.css"/>
+        <title>Donnez nous votre avis</title>
+    </head>
+
+<body>
+    <header>
+    
+        <div id="header-left">
+            <a href="Panier.html" id="panier">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4VwnUaVMSQhSC6RSWMwSH47j8AubSHlaEw&s" alt="Panier" >
+            </a>
+            <form>
+                <label for="recherche"></label>
+                <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
+                <button>
+                    <img src="https://media.istockphoto.com/id/1151843591/fr/vectoriel/ic%C3%B4ne-de-signe-de-loupe-dans-le-style-transparent-illustration-vectorielle-de-loupe-sur.jpg?s=612x612&w=0&k=20&c=vbHMwPIqfB8VcOGZ_XCYcB-DiNRd-bc1VYhD6YAxz30="/>
+                </button>
+            </form>
+        </div>
+
+        <div id="header-center">
+            <a href="Accueil.html">
+                <img src="images/Glogo.png" alt="Logo" >
+            </a>
+        </div>
+
+        <div id="header-right">
+            <a href="Connexion.html">Se connecter</a><span>/</span>
+            <a href="Inscription.html">S'inscrire</a>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="avis-container">
+            <h1>Donnez nous votre avis</h1>
+            <p>Votre avis nous est précieux. N'hésitez pas à nous faire part de vos commentaires !</p>
+
+            <form id="avis-form">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Note *</label>
+                    <select id="note" name="note" required>
+                        <option value="">-- Choisissez une note --</option>
+                        <option value="5">Excellent</option>
+                        <option value="4">Très bon</option>
+                        <option value="3">Bon</option>
+                        <option value="2">Moyen</option>
+                        <option value="1"> Mauvais</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="avis">Votre avis *</label>
+                    <input type="text" id="avis" name="avis" placeholder="Qu'en avez-vous pensé ?(facultatif)">
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-left">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <div id="footer-center">
+            <a href="Avis.html">Donnez nous votre avis! </a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* ===========================
+   Style de la page Avis
+   =========================== */
+
+main {
+    min-height: 100vh;                  /* occupe toute la hauteur de l'écran */
+    display: flex;                      /* utilise flexbox pour centrer les éléments */
+    justify-content: center;            /* centre horizontalement */
+    align-items: center;                /* centre verticalement */
+    padding: 40px 20px;                 /* ajoute de l'espace autour du contenu */
+}
+
+#avis-container {
+    background-color: rgba(251, 246, 242, 0.95);  /* couleur pêche claire avec transparence */
+    border-radius: 15px;                /* coins arrondis */
+    padding: 40px;                      /* espace intérieur */
+    max-width: 600px;                   /* largeur maximale */
+    width: 100%;                        /* utilise toute la largeur disponible */
+    box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3);  /* ombre pour relief */
+}
+
+#avis-container h1 {
+    color: #cc7061;                     /* couleur pêche du titre */
+    text-align: center;                 /* centre le titre */
+    margin-bottom: 10px;                /* espace sous le titre */
+    font-size: 2.5em;                   /* taille du titre */
+}
+
+#avis-container p {
+    color: #666;                        /* couleur gris foncé */
+    text-align: center;                 /* centre le texte */
+    margin-bottom: 30px;                /* espace sous le paragraphe */
+    font-size: 1.1em;                   /* taille légèrement agrandie */
+}
+
+/* Groupes de formulaire */
+.form-group {
+    margin-bottom: 25px;                /* espace entre chaque groupe de champs */
+}
+
+.form-group label {
+    display: block;                     /* la légende occupe toute la largeur */
+    margin-bottom: 8px;                 /* espace sous la légende */
+    color: #cc7061;                     /* couleur pêche */
+    font-weight: bold;                  /* texte en gras */
+    font-size: 1em;                     /* taille normal */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;                        /* occupe toute la largeur */
+    padding: 12px;                      /* espace intérieur des champs */
+    border: 1px solid #cc7061;          /* bordure pêche */
+    border-radius: 8px;                 /* coins légèrement arrondis */
+    font-size: 1em;                     /* taille du texte */
+    font-family: Arial, sans-serif;     /* police */
+    box-sizing: border-box;             /* la bordure n'ajoute pas de largeur */
+    background-color: white;            /* fond blanc */
+    color: #333;                        /* texte gris foncé */
+}
+
+.form-group textarea {
+    resize: vertical;                   /* permet de redimensionner verticalement uniquement */
+    min-height: 150px;                  /* hauteur minimale */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;                      /* enlève le contour bleu par défaut */
+    border-color: #a85a52;              /* bordure pêche foncée quand actif */
+    box-shadow: 0 0 8px rgba(204, 112, 97, 0.3);  /* ombre légère autour */
+    background-color: #fffbf8;          /* fond légèrement teinté */
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    width: 100%;                        /* occupe toute la largeur */
+    padding: 14px;                      /* espace intérieur du bouton */
+    background-color: #cc7061;          /* couleur pêche du bouton */
+    color: white;                       /* texte blanc */
+    border: none;                       /* pas de bordure */
+    border-radius: 8px;                 /* coins arrondis */
+    font-size: 1.1em;                   /* texte légèrement grand */
+    font-weight: bold;                  /* texte en gras */
+    cursor: pointer;                    /* curseur main pour indiquer clic possible */
+    transition: background-color 0.3s ease;  /* changement de couleur progressif */
+}
+
+.btn-submit:hover {
+    background-color: #a85a52;          /* couleur pêche foncée au survol */
+}
+
+.btn-submit:active {
+    transform: scale(0.98);             /* le bouton rétrécit légèrement au clic */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #avis-container {
+        padding: 25px;                  /* moins d'espace sur petits écrans */
+    }
+
+    #avis-container h1 {
+        font-size: 1.8em;               /* titre plus petit sur mobile */
+    }
+
+    main {
+        padding: 20px;                  /* moins d'espace global sur mobile */
+    }
+}

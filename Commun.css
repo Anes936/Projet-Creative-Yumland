@@ -1,4 +1,19 @@
 /* ===========================
+   0️⃣ Style général du body
+   =========================== */
+body {
+    background-image: url('/Users/iliana/Downloads/PJJ/images/9A4320E0-DB7B-461E-84A4-E2D7660E2406.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
    1️⃣ Style général du header
    =========================== */
 header {
