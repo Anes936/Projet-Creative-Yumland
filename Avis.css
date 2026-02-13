@@ -86,7 +86,6 @@ main {
     font-size: 1.1em;                   /* texte légèrement grand */
     font-weight: bold;                  /* texte en gras */
     cursor: pointer;                    /* curseur main pour indiquer clic possible */
-    transition: background-color 0.3s ease;  /* changement de couleur progressif */
 }
 
 .btn-submit:hover {
@@ -97,17 +96,3 @@ main {
     transform: scale(0.98);             /* le bouton rétrécit légèrement au clic */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    #avis-container {
-        padding: 25px;                  /* moins d'espace sur petits écrans */
-    }
-
-    #avis-container h1 {
-        font-size: 1.8em;               /* titre plus petit sur mobile */
-    }
-
-    main {
-        padding: 20px;                  /* moins d'espace global sur mobile */
-    }
-}

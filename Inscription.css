@@ -1,0 +1,34 @@
+main {
+    min-height: 100vh;                  /* occupe toute la hauteur de l'écran */
+    display: flex;                      /* utilise flexbox pour centrer les éléments */
+    flex-direction: column;
+    justify-content: center;            /* centre horizontalement */
+    align-items: center;                /* centre verticalement */
+    padding: 20px 10px;                 /* ajoute de l'espace autour du contenu */
+}
+
+h1 {
+    color: #cc7061;                     /* couleur pêche du titre */
+    text-align: center;                 /* centre le titre */
+    margin-bottom: 30px;                /* espace sous le titre */
+    font-size: 2.5em;                   /* taille du titre */
+}
+
+main form{
+    background-color: rgba(251, 246, 242, 0.95);  /* couleur pêche claire avec transparence */
+    border-radius: 15px;                /* coins arrondis */
+    padding: 40px;                      /* espace intérieur */
+    max-width: 600px;                   /* largeur maximale */
+    width: 100%;                        /* utilise toute la largeur disponible */
+    box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3);  /* ombre pour relief */
+}
+
+label {
+    display: block;                     /* la légende occupe toute la largeur */
+    margin-bottom: 8px;                 /* espace sous la légende */
+    color: #cc7061;                     /* couleur pêche */
+    font-weight: bold;                  /* texte en gras */
+    font-size: 1em;                     /* taille normal */
+}
+
+
