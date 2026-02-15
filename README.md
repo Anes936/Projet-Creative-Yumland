@@ -1,35 +1,111 @@
-<header>
+✅ HTML – Balises principales
+html → racine du site
+head → infos invisibles
+body → contenu visible
+title → titre onglet
+meta → métadonnées
+header → en-tête
+nav → menu
+main → contenu principal
+section → section
+article → article
+aside → côté
+footer → pied de page
+div → bloc générique
+h1 à h6 → titres
+p → paragraphe
+span → texte ciblé
+br → saut ligne
+hr → séparation
+a → lien
+img → image
+video → vidéo
+audio → son
+iframe → page intégrée
+ul → liste simple
+ol → liste numérotée
+li → élément
+table → tableau
+tr → ligne
+td → cellule
+th → titre colonne
+form → formulaire
+input → champ
+textarea → texte long
+select → liste
+option → choix
+button → bouton
+label → nom champ
+details → zone cachée
+summary → bouton
+dialog → popup
+progress → chargement
+meter → jauge
 
-            <div class ="Glogo">
-                <a href="Acceuil.html"><img src="Glogo.png" alt="GLogo"></a>
-            </div>
+✅ HTML – Attributs
+id → identifiant unique
+class → style commun
+src → fichier
+href → lien
+alt → description image
+type → type champ
+name → nom donnée
+value → valeur
+required → obligatoire
+placeholder → exemple
+disabled → bloqué
+readonly → lecture seule
+data-* → données perso
 
-            <form class="recherche" action="recherche.html" method="get">
+✅ Classes courantes (HTML/CSS)
+container → largeur centrée
+row → ligne
+col → colonne
+flex → flexbox
+grid → grille
+btn → bouton
+card → carte
+navbar → menu
+modal → popup
+active → actif
+hidden → caché
+error → erreur
+success → succès
 
-                <input type="text" name="q" placeholder="Rechercher un gâteau...">
+✅ CSS – Sélecteurs
+* → tout
+p → balise
+.box → classe
+#menu → id
+div p → enfant
+:hover → survol
+:focus → focus
+:checked → coché
 
-                    <button type="submit">
-                       <img src="search-icon.png" alt="Rechercher">
-                    </button>
-
-            </form>
-
-
-
-            <div class="actions">
-
-                <a href="Connexion.html" class="connexion">Connexion</a>
-                    <span>/</span>
-                <a href="Inscription.html" class="connexion">S'inscrire</a>
-
-            </div>
-
-
-
-
-
-        </header>
-
-
-
-        Partie du header pas encore fonctionelle
+✅ CSS – Propriétés principales
+color → couleur texte
+font-size → taille texte
+font-family → police
+text-align → alignement
+width → largeur
+height → hauteur
+margin → espace extérieur
+padding → espace intérieur
+border → bordure
+background → fond
+box-shadow → ombre
+border-radius → arrondi
+display → type affichage
+position → positionnement
+z-index → profondeur
+flex-direction → direction flex
+justify-content → alignement horizontal
+align-items → alignement vertical
+gap → espace
+grid-template-columns → colonnes
+grid-template-rows → lignes
+transition → animation simple
+transform → déplacement
+animation → animation avancée
+opacity → transparence
+overflow → dépassement

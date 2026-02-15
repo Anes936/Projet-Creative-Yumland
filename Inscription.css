@@ -86,4 +86,5 @@
 		text-decoration: none;
 	}
 
-	#dejacompte:hover { color: #a85a52; }
+	#dejacompte:hover { color: #a85a52;
+	text-decoration: underline; }
