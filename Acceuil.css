@@ -1,9 +1,9 @@
 main{padding:48px 24px;display:block;max-width:1600px;margin:0 auto}
 
 h1{font-size:2.4rem;color:#a85a52;text-align:center;margin-top:12px}
-h2{font-size:1.15rem;color:#cc7061;text-align:center;margin-bottom:18px}
+h2{font-size:1.15rem;color:#cc7061;text-align:center;margin-bottom:25px}
 
-#titre{font-weight:700;letter-spacing:0.4px;text-align:center;color:#fbf6f2;margin-top:40px;font-size:1.2rem}
+#titre{font-weight:700;letter-spacing:0.4px;text-align:center;color:#cc7061;margin-top:40px;font-size:1.2rem}
 
 #corps{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:28px auto 18px;max-width:1200px;padding:0 12px;box-sizing:border-box}
 
@@ -15,8 +15,7 @@ h2{font-size:1.15rem;color:#cc7061;text-align:center;margin-bottom:18px}
 #decouvrir{padding:14px 20px;border-radius:10px;border:0;background:#cc7061;color:#fff;font-weight:700;cursor:pointer}
 #decouvrir:hover{background:#a85a52}
 
-@media(max-width:900px){.gateau1,.gateau2,.gateau3{width:45%}}
-@media(max-width:480px){.gateau1,.gateau2,.gateau3{width:100%}main{padding:24px 12px}}
+
 /* Acceuil.css - styles pour la page d'accueil et la section Best Sellers */
 
 /* Acceuil.css - styles pour la page d'accueil et la section Best Sellers
@@ -29,12 +28,12 @@ h1{font-size:2.4rem;color:#a85a52;text-align:center;margin-top:12px}
 h2{font-size:1.15rem;color:#cc7061;text-align:center;margin-bottom:18px}
 
 /* Titre best sellers */          /* même couleur que le header pour se fondre dedans */
-#titre{font-weight:700;letter-spacing:0.4px;text-align:center;color:#fbf6f2;margin-top:40px;font-size:1.2rem}
+#titre{font-weight:700;letter-spacing:0.4px;text-align:center;color:#cc7061;margin-top:40px;font-size:1.2rem}
 
 /* Conteneur best sellers (anciennement #best-sellers) */
 #corps{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:28px auto 18px;max-width:1200px;padding:0 12px;box-sizing:border-box}
 
-.gateau1,.gateau2,.gateau3{width:260px;text-align:center}
+.gateau1,.gateau2,.gateau3{width:400px;text-align:center}
 .gateau1 img,.gateau2 img,.gateau3 img{width:100%;height:170px;object-fit:cover;border-radius:10px;display:block}
 .ngateau1,.ngateau2,.ngateau3{margin-top:10px;font-weight:700;color:#cc7061}
 
