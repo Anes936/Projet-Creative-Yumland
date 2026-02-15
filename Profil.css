@@ -1,0 +1,86 @@
+/* Profil.css - Styles simples pour la page de profil */
+
+.profil-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.profil-wrapper h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.profil-section {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #efe7e3;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profil-section h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #efe7e3;
+  padding-bottom: 10px;
+}
+
+.info-group p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.edit-btn:hover {
+  background: #f5ede7;
+}
+
+.commande {
+  border: 1px solid #f5ede7;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background: #fafaf8;
+}
+
+.commande p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status.delivered {
+  background: #d4f1d4;
+  color: #2d7a2d;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}

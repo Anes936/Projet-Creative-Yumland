@@ -1,34 +1,89 @@
-main {
-    min-height: 100vh;                  /* occupe toute la hauteur de l'écran */
-    display: flex;                      /* utilise flexbox pour centrer les éléments */
-    flex-direction: column;
-    justify-content: center;            /* centre horizontalement */
-    align-items: center;                /* centre verticalement */
-    padding: 20px 10px;                 /* ajoute de l'espace autour du contenu */
-}
 
-h1 {
-    color: #cc7061;                     /* couleur pêche du titre */
-    text-align: center;                 /* centre le titre */
-    margin-bottom: 30px;                /* espace sous le titre */
-    font-size: 2.5em;                   /* taille du titre */
-}
+	main {
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 40px 20px;
+	}
 
-main form{
-    background-color: rgba(251, 246, 242, 0.95);  /* couleur pêche claire avec transparence */
-    border-radius: 15px;                /* coins arrondis */
-    padding: 40px;                      /* espace intérieur */
-    max-width: 600px;                   /* largeur maximale */
-    width: 100%;                        /* utilise toute la largeur disponible */
-    box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3);  /* ombre pour relief */
-}
+	#corps{
+		background-color: rgba(251, 246, 242, 0.95);
+		border-radius: 15px;
+		padding: 40px;
+		max-width: 600px;
+		width: 100%;
+		box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3);
+		box-sizing: border-box;
+	}
 
-label {
-    display: block;                     /* la légende occupe toute la largeur */
-    margin-bottom: 8px;                 /* espace sous la légende */
-    color: #cc7061;                     /* couleur pêche */
-    font-weight: bold;                  /* texte en gras */
-    font-size: 1em;                     /* taille normal */
-}
+	main > h1 {
+		color: #cc7061;
+		text-align: center;
+		margin-bottom: 10px;
+		font-size: 2.2em;
+	}
+	h1 {
+		color: #a85a52;
+		text-align: center;
+	}
+
+	form label {
+		display: block;
+		margin-bottom: 8px;
+		color: #cc7061;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	form input[type="text"],
+	form input[type="email"],
+	form input[type="tel"],
+	form input[type="password"],
+	form input[type="date"] {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #cc7061;
+		border-radius: 8px;
+		font-size: 1em;
+		font-family: Arial, sans-serif;
+		box-sizing: border-box;
+		background-color: white;
+		color: #333;
+	}
+
+	form input:focus,
+	form select:focus,
+	form textarea:focus {
+		outline: none;
+		border-color: #a85a52;
+		box-shadow: 0 0 8px rgba(204, 112, 97, 0.3);
+		background-color: #fffbf8;
+	}
 
 
+	/* Bouton de soumission */
+	input[type="submit"],
+	#entrer {
+		width: 100%;
+		padding: 14px;
+		background-color: #cc7061;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.05em;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+
+
+	#dejacompte {
+		display: block;
+		margin-top: 14px;
+		text-align: center;
+		color: #cc7061;
+		text-decoration: none;
+	}
+
+	#dejacompte:hover { color: #a85a52; }

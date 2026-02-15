@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Démo Balises Avancées</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        dialog {
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        meter, progress {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Démo des Balises HTML Modernes</h1>
+
+    <section>
+        <h2>Zone déroulante (details / summary)</h2>
+
+        <details>
+            <summary>Afficher les informations</summary>
+
+            <p>
+                Ceci est un contenu caché qui apparaît
+                quand on clique sur le résumé.
+            </p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Fenêtre Modale (dialog)</h2>
+
+        <button onclick="ouvrirDialog()">Ouvrir la fenêtre</button>
+
+        <dialog id="popup">
+            <h3>Fenêtre modale</h3>
+
+            <p>Bienvenue dans cette popup HTML native.</p>
+
+            <button onclick="fermerDialog()">Fermer</button>
+        </dialog>
+    </section>
+
+    <section>
+        <h2>Jauge (meter)</h2>
+
+        <p>Niveau de batterie :</p>
+
+        <meter
+            min="0"
+            max="100"
+            low="20"
+            high="80"
+            optimum="90"
+            value="65">
+        </meter>
+
+        <p>65%</p>
+    </section>
+
+    <section>
+        <h2>Barre de progression (progress)</h2>
+
+        <p>Téléchargement :</p>
+
+        <progress id="bar" value="0" max="100"></progress>
+
+        <p id="txt">0%</p>
+
+        <button onclick="demarrer()">Démarrer</button>
+    </section>
+
+
+<script>
+    const dialog = document.getElementById("popup");
+    const bar = document.getElementById("bar");
+    const txt = document.getElementById("txt");
+
+    function ouvrirDialog() {
+        dialog.showModal();
+    }
+
+    function fermerDialog() {
+        dialog.close();
+    }
+
+    function demarrer() {
+        let val = 0;
+
+        const timer = setInterval(() => {
+            val += 5;
+
+            bar.value = val;
+            txt.textContent = val + "%";
+
+            if (val >= 100) {
+                clearInterval(timer);
+                alert("Téléchargement terminé !");
+            }
+        }, 200);
+    }
+</script>
+
+</body>
+</html>

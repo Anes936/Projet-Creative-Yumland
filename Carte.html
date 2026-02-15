@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nos pâtisseries</title>
+  <link rel="stylesheet" href="Commun.css">
+  <link rel="stylesheet" href="Carte.css">
+</head>
+<body>
+  <header>
+    <div id="header-left">
+      <a href="Panier.html" id="panier"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4VwnUaVMSQhSC6RSWMwSH47j8AubSHlaEw&s" alt="Panier"></a>
+      <form id="search-inline">
+        <label for="recherche"></label>
+        <input type="text" id="recherche" placeholder="Rechercher un produit...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+    <div id="header-center"><a href="Accueil.html"><img src="images/Glogo.png" alt="Logo"></a></div>
+    <div id="header-right"><a href="Connexion.html">Se connecter</a>/<a href="Inscription.html">S'inscrire</a></div>
+  </header>
+
+  <main class="catalogue">
+    <aside class="filters">
+      <div class="filter-block">
+        <h4>Recherche</h4>
+        <input type="search" id="search" placeholder="Chercher...">
+      </div>
+
+      <form class="filter-block">
+        <h4>Catégorie</h4>
+        <label><input type="checkbox" name="cat" value="cake"> Gâteaux</label>
+        <label><input type="checkbox" name="cat" value="tarte"> Tartes</label>
+        <label><input type="checkbox" name="cat" value="biscuit"> Biscuits</label>
+      </form>
+
+      <form class="filter-block">
+        <h4>Saveurs</h4>
+        <label><input type="checkbox" name="flav" value="choco"> Chocolat</label>
+        <label><input type="checkbox" name="flav" value="fruits"> Fruits</label>
+        <label><input type="checkbox" name="flav" value="vanille"> Vanille</label>
+      </form>
+
+      <form class="filter-block">
+        <h4>Allergènes</h4>
+        <label><input type="checkbox" name="all" value="noix"> Fruits à coque</label>
+        <label><input type="checkbox" name="all" value="gluten"> Gluten</label>
+        <label><input type="checkbox" name="all" value="lactose"> Lactose</label>
+      </form>
+    </aside>
+
+    <section class="products">
+      <div class="products-header">
+        <h1>Nos produits</h1>
+        <div class="products-search"><input type="search" placeholder="Rechercher un produit"></div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <img src="images/9A4320E0-DB7B-461E-84A4-E2D7660E2406.jpeg" alt="Gateau 1">
+          <h3>Gateau 1</h3>
+          <p class="meta">Catégorie • Saveur</p>
+        </article>
+
+        <article class="card">
+          <img src="images/Glogo.png" alt="Gateau 2">
+          <h3>Gateau 2</h3>
+          <p class="meta">Catégorie • Saveur</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Gateau 3">
+          <h3>Gateau 3</h3>
+          <p class="meta">Catégorie • Saveur</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="Gateau 4">
+          <h3>Gateau 4</h3>
+          <p class="meta">Catégorie • Saveur</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=600&q=80" alt="Gateau 5">
+          <h3>Gateau 5</h3>
+          <p class="meta">Catégorie • Saveur</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=600&q=80" alt="Gateau 6">
+          <h3>Gateau 6</h3>
+          <p class="meta">Catégorie • Saveur</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-left"><img src="images/logo.png" alt="logo"></div>
+    <div id="footer-center"><a href="Avis.html">Donnez nous votre avis!</a></div>
+  </footer>
+</body>
+</html>

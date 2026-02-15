@@ -1,0 +1,20 @@
+
+main{
+    min-height: 100vh;                  /* occupe toute la hauteur de l'écran */
+    display: flex;                      /* utilise flexbox pour centrer les éléments */
+    justify-content: center;            /* centre horizontalement */
+    align-items: center;                /* centre verticalement */
+    padding: 40px 20px;                 /* ajoute de l'espace autour du contenu */
+}
+
+#corps {
+    background-color: rgba(251, 246, 242, 0.95); /* fond légèrement transparent */
+    border-radius: 15px;                 /* coins arrondis */
+    padding: 40px;                       /* espace intérieur */
+    max-width: 600px;                   /* largeur maximale pour éviter que le contenu soit trop large */
+    width: auto;                        /* occupe toute la largeur disponible */
+    box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3); /* ombre pour un effet de profondeur */
+    box-sizing: border-box;             /* inclut le padding dans la largeur totale */
+}
+
+
