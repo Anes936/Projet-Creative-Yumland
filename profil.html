@@ -8,14 +8,33 @@
   <link rel="stylesheet" href="Profil.css">
 </head>
 <body>
-  <header>
+             <header>
+    
     <div id="header-left">
-      <a href="Panier.html" id="panier"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4VwnUaVMSQhSC6RSWMwSH47j8AubSHlaEw&s" alt="Panier"></a>
+        <a href="Panier.html" id="panier">
+            <img src="images/Panier.jpeg" alt="Panier" >
+        </a>
+        <form>
+            <label for="recherche"></label>
+            <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
+            <button>
+                <img src="images/Rcherche.jpeg" alt="Loupe"/>
+            </button>
+        </form>
     </div>
-    <div id="header-center"><a href="Accueil.html"><img src="images/Glogo.png" alt="Logo"></a></div>
-    <div id="header-right"><a href="Connexion.html">Se connecter</a>/<a href="Inscription.html">S'inscrire</a></div>
-  </header>
 
+    <div id="header-center">
+        <a href="Accueil.html">
+            <img src="images/Glogo.png" alt="Logo" >
+        </a>
+    </div>
+
+    <div id="header-right">
+        <a href="Connexion.html">Se connecter</a><span>/</span>
+        <a href="Inscription.html">S'inscrire</a>
+    </div>
+
+</header>
   <main>
     <div class="profil-wrapper">
       <h1>Mon profil</h1>
@@ -58,10 +77,13 @@
   </main>
 
   <footer>
-    <div id="footer-left"><img src="images/logo.png" alt="logo"></div>
-    <div id="footer-center"><a href="Avis.html">Donnez nous votre avis!</a></div>
-  </footer>
-
+    <div id="footer-left">
+        <img src="images/logo.png" alt="logo">
+    </div>
+    <div id="footer-right">
+        <a href="Avis.html">Donnez nous votre avis! </a>
+    </div>
+</footer>
 
   </script>
 </body>

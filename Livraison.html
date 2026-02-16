@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="Connexion.css"/>
-        <link rel="stylesheet" href="Commun.css">
-        <title>Page de Connexion</title>
-    </head>
+<head>
 
-    <body>
-        
-             <header>
+    <link rel="stylesheet" type="text/css" href="Livraison.css"/>
+    <link rel="stylesheet" href="Commun.css">
+    <title>Page de Livraison</title>
+</head>
+
+<body>
+
+
+            <header>
     
     <div id="header-left">
         <a href="Panier.html" id="panier">
@@ -38,18 +41,42 @@
 
     <div id="corps">
 
-        <h1>Connexion</h1>
+        <h1>Livraison</h1>
 
-        <label for="mail/id"></label>
-        <input type="text" id="mail/id" required placeholder="Email/Nom d'utilisateur"><br/>
+        <h2>Commande en cours</h2>
 
-        <label for="mdp"></label>
-        <input type="password" id="mdp" required placeholder="Mot de passe"><br/>
+        <div class="commande">
 
-        <label for="Connexion"></label>
-        <input type="submit" id="Connexion" value="Se connecter"/><br/>
+            <p><strong>Numéro de commande :</strong> </p>
 
-        <a href="Inscription.html">Vous n'avez pas encore de compte ? Inscrivez vous ici</a>
+            <p><strong>Nom du client :</strong> </p>
+
+            <p><strong>Adresse :</strong> </p>
+
+            <p><strong>Code interphone :</strong> </p>
+
+            <p><strong>Étage :</strong> </p>
+
+            <p><strong>Téléphone :</strong> </p>
+
+            <p><strong>Commentaires :</strong> </p>
+
+            <p><strong>Contenu de la commande :</strong> </p>
+
+        </div>
+
+        <div class="actionslivraison">
+
+            <button id="maps">
+                Ouvrir dans Maps
+            </button>
+
+            <button id="valider">
+                Livraison terminée
+            </button>
+
+        </div>
+
     </div>
 
 </main>
@@ -63,5 +90,5 @@
     </div>
 </footer>
 
-    </body>
+</body>
 </html>
