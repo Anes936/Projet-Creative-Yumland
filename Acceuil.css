@@ -1,46 +1,89 @@
-main{padding:48px 24px;display:block;max-width:1600px;margin:0 auto}
+/* ===== STRUCTURE PRINCIPALE ===== */
 
-h1{font-size:2.4rem;color:#a85a52;text-align:center;margin-top:12px}
-h2{font-size:1.15rem;color:#cc7061;text-align:center;margin-bottom:25px}
+main {
+    padding: 48px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-#titre{font-weight:700;letter-spacing:0.4px;text-align:center;color:#cc7061;margin-top:40px;font-size:1.2rem}
+/* ===== TITRES ===== */
 
-#corps{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:28px auto 18px;max-width:1200px;padding:0 12px;box-sizing:border-box}
+h1 {
+    font-size: 2.4rem;
+    color: #a85a52;
+    text-align: center;
+    margin-top: 12px;
+}
 
-.gateau1,.gateau2,.gateau3{width:260px;text-align:center}
-.gateau1 img,.gateau2 img,.gateau3 img{width:100%;height:170px;object-fit:cover;border-radius:10px;display:block}
-.ngateau1,.ngateau2,.ngateau3{margin-top:10px;font-weight:700;color:#cc7061}
+h2 {
+    font-size: 1.1rem;
+    color: #cc7061;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-.Bouton{text-align:center;margin-bottom:48px}
-#decouvrir{padding:14px 20px;border-radius:10px;border:0;background:#cc7061;color:#fff;font-weight:700;cursor:pointer}
-#decouvrir:hover{background:#a85a52}
+#titre {
+    font-weight: bold;
+    text-align: center;
+    color: #cc7061;
+    margin-top: 40px;
+}
 
+/* ===== BEST SELLERS ===== */
 
-/* Acceuil.css - styles pour la page d'accueil et la section Best Sellers */
+#corps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
 
-/* Acceuil.css - styles pour la page d'accueil et la section Best Sellers
-	 Adapté aux nouveaux noms de classes/IDs */
+/* On regroupe les 3 gâteaux */
+.gateau1, 
+.gateau2, 
+.gateau3 {
+    width: 260px;
+    text-align: center;
+}
 
-/* Page plus large */
-main{padding:48px 24px;display:block;max-width:1600px;margin:0 auto}
+.gateau1 img, 
+.gateau2 img, 
+.gateau3 img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-h1{font-size:2.4rem;color:#a85a52;text-align:center;margin-top:12px}
-h2{font-size:1.15rem;color:#cc7061;text-align:center;margin-bottom:18px}
+/* Noms des gâteaux */
+.ngateau1, 
+.ngateau2, 
+.ngateau3 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #cc7061;
+}
 
-/* Titre best sellers */          /* même couleur que le header pour se fondre dedans */
-#titre{font-weight:700;letter-spacing:0.4px;text-align:center;color:#cc7061;margin-top:40px;font-size:1.2rem}
+/* ===== BOUTON ===== */
 
-/* Conteneur best sellers (anciennement #best-sellers) */
-#corps{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:28px auto 18px;max-width:1200px;padding:0 12px;box-sizing:border-box}
+.Bouton {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-.gateau1,.gateau2,.gateau3{width:400px;text-align:center}
-.gateau1 img,.gateau2 img,.gateau3 img{width:100%;height:170px;object-fit:cover;border-radius:10px;display:block}
-.ngateau1,.ngateau2,.ngateau3{margin-top:10px;font-weight:700;color:#cc7061}
+#decouvrir {
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #cc7061;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-/* Bouton principal sous les best-sellers */
-.Bouton{text-align:center;margin-bottom:48px}
-#decouvrir{padding:14px 20px;border-radius:10px;border:0;background:#cc7061;color:#fff;font-weight:700;cursor:pointer}
-#decouvrir:hover{background:#a85a52}
-
+#decouvrir:hover {
+    background-color: #a85a52;
+}
 
 

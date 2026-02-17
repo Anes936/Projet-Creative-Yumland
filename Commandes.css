@@ -1,118 +1,59 @@
-/* ===== CENTRAGE GLOBAL ===== */
-
 main {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+    margin: 60px 0;
 }
-
-
-/* ===== CARTE PRINCIPALE ===== */
 
 #corps {
-    background-color: rgba(251, 246, 242, 0.95);
-
-    border-radius: 15px;
+    background-color: #fbf6f2;
     padding: 40px;
-
-    max-width: 650px;
-    width: 100%;
-
-    box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3);
-
-    box-sizing: border-box;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgba(204, 112, 97, 0.3);
 }
 
-
-/* ===== TITRES ===== */
-
-h1 {
-    color: #a85a52;
+#corps h1 {
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 2.2em;
-}
-
-h2 {
     color: #cc7061;
-    text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
+#corps h2 {
+    color: #cc7061;
+    margin-bottom: 20px;
+}
 
-/* ===== BLOC COMMANDE ===== */
+/* Bloc commande */
 
 .commande {
     background-color: white;
-
-    border: 1px solid #cc7061;
-    border-radius: 10px;
-
     padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0px 10px rgba(204, 112, 97, 0.2);
 }
 
 .commande p {
-    margin: 8px 0;
-    font-size: 1em;
-    color: #333;
+    margin-bottom: 8px;
 }
 
-.commande strong {
-    color: #a85a52;
+.livraison {
+    border-left: 6px solid #cc7061;
 }
 
+/* Bouton */
 
-/* ===== ZONE BOUTONS ===== */
-
-.actionslivraison {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-
-/* ===== BOUTONS ===== */
-
-#maps,
-#valider {
-    flex: 1;
-
-    padding: 14px;
-
-    border: none;
-    border-radius: 8px;
-
-    font-size: 1em;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
-}
-
-
-/* Bouton Maps */
-
-#maps {
-    background-color: #2196F3;
-    color: white;
-}
-
-#maps:hover {
-    background-color: #1976D2;
-}
-
-
-/* Bouton Validation */
-
-#valider {
+button {
+    margin-top: 10px;
     background-color: #cc7061;
     color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-#valider:hover {
-    background-color: #a85a52;
+button:hover {
+    background-color: #b85f52;
 }
