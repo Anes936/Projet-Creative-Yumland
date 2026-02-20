@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="Commun.css">
+  <link rel="stylesheet" href="Profil.css">
+  <title>Page de profil</title>
+</head>
+<body>
+
+<header>
+    
+    <div id="header-left">
+        <a href="Panier.html" id="panier">
+            <img src="images/Panier.jpeg" alt="Panier">
+        </a>
+        <form>
+            <label for="recherche"></label>
+            <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
+            <button>
+                <img src="images/Rcherche.jpeg" alt="Loupe">
+            </button>
+        </form>
+    </div>
+
+    <div id="header-center">
+        <a href="Accueil.html">
+            <img src="images/Glogo.png" alt="Logo">
+        </a>
+    </div>
+
+    <div id="header-right">
+        <a href="Connexion.html">Se connecter</a><span>/</span>
+        <a href="Inscription.html">S'inscrire</a>
+    </div>
+
+</header>
+
+<main>
+
+    <div id="profil">
+
+      <h1>Mon profil</h1>
+
+      <section id="blocinfos">
+        <h2>Mes informations</h2>
+        <div id="groupeinfo">
+          <p><strong>Nom :</strong> <button id="modifier">✏️</button></p>
+          <p><strong>Prénom :</strong> <button id="modifier">✏️</button></p>
+          <p><strong>Email :</strong> <button id="modifier">✏️</button></p>
+          <p><strong>Téléphone :</strong> <button id="modifier">✏️</button></p>
+          <p><strong>Adresse :</strong> <button id="modifier">✏️</button></p>
+        </div>
+      </section>
+
+      <section id="bloccommandes">
+        <h2>Mes commandes</h2>
+
+        <div id="commande">
+          <p>Commande #12345</p>
+          <p><span id="statut" class="livre">Livré</span></p>
+        </div>
+
+        <div id="commande">
+          <p>Commande #12346</p>
+          <p><span id="statut" class="attente">En attente</span></p>
+        </div>
+
+        <div id="commande">
+          <p>Commande #12347</p>
+          <p><span id="statut" class="livre">Livré</span></p>
+        </div>
+
+      </section>
+
+      <section id="blocfidelite">
+        <h2>Mon compte fidélité</h2>
+        <p><strong>Points actuels :</strong> 250 pts</p>
+      </section>
+
+    </div>
+
+</main>
+
+<footer>
+    <div id="footer-left">
+        <img src="images/logo.png" alt="logo">
+    </div>
+    <div id="footer-right">
+        <a href="Avis.html">Donnez nous votre avis! </a>
+    </div>
+</footer>
+
+</body>
+</html>

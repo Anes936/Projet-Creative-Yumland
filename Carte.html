@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nos pâtisseries</title>
   <link rel="stylesheet" href="Commun.css">
   <link rel="stylesheet" href="Carte.css">
+    <title>Carte</title>
 </head>
 <body>
-            <header>
+
+<header>
     
     <div id="header-left">
         <a href="Panier.html" id="panier">
@@ -36,65 +35,76 @@
 
 </header>
 
-  <main class="catalogue">
-    <aside class="filters">
-      <div class="filter-block">
+<main id="catalogue">
+
+    <aside id="filtres">
+
+      <div id="blocrecherche">
         <h4>Recherche</h4>
         <input type="search" id="search" placeholder="Chercher...">
       </div>
 
-      <form class="filter-block">
+      <form id="bloccategorie">
         <h4>Catégorie</h4>
         <label><input type="checkbox" name="cat" value="cake"> Gâteaux</label>
         <label><input type="checkbox" name="cat" value="tarte"> Tartes</label>
       </form>
 
-      <form class="filter-block">
+      <form id="blocsauveur">
         <h4>Saveurs</h4>
         <label><input type="checkbox" name="flav" value="choco"> Chocolat</label>
         <label><input type="checkbox" name="flav" value="fruits"> Fruits</label>
         <label><input type="checkbox" name="flav" value="vanille"> Vanille</label>
       </form>
 
-    <section class="products">
-      <div class="products-header">
+    </aside>
+
+    <section id="blocproduits">
+
+      <div id="blocentete">
         <h1>Nos produits</h1>
-        <div class="products-search"><input type="search" placeholder="Rechercher un produit"></div>
+        <div id="blocrechercheproduit">
+            <input type="search" placeholder="Rechercher un produit">
+        </div>
       </div>
 
-      <div class="grid">
-        <article class="card">
+      <div id="blocgrille">
+
+        <article id="gateau">
           <img src="images/Flan.jpg" alt="flan vanille">
           <h3>Flan vanille</h3>
         </article>
 
-        <article class="card">
+        <article id="gateau">
           <img src="images/Fondantc.jpg" alt="Fondant au chocolat">
           <h3>Fondant au chocolat</h3>
         </article>
 
-        <article class="card">
+        <article id="gateau">
           <img src="images/Fondantcb.jpeg" alt="Fondant chocolat blanc">
           <h3>Fondant chocolat blanc</h3>
         </article>
 
-        <article class="card">
+        <article id="gateau">
           <img src="images/Tartecitron.jpg" alt="Tarte au citron">
           <h3>Tarte au citron</h3>
         </article>
 
-        <article class="card">
+        <article id="gateau">
           <img src="images/Millefeuille.jpeg" alt="Mille feuilles">
-          <h3>mille feuilles</h3>
+          <h3>Mille feuilles</h3>
         </article>
 
-        <article class="card">
+        <article id="gateau">
           <img src="images/Tartefraises.jpg" alt="Tarte aux fraises">
           <h3>Tarte aux fraises</h3>
         </article>
+
       </div>
+
     </section>
-  </main>
+
+</main>
 
 <footer>
     <div id="footer-left">
@@ -104,5 +114,6 @@
         <a href="Avis.html">Donnez nous votre avis! </a>
     </div>
 </footer>
+
 </body>
 </html>

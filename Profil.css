@@ -1,19 +1,21 @@
-/* Profil.css - Styles simples pour la page de profil */
+/* Profil.css - Version adaptée aux id */
 
-.profil-wrapper {
+#profil {
   max-width: 800px;
   margin: 30px auto;
   padding: 0 16px;
   box-sizing: border-box;
 }
 
-.profil-wrapper h1 {
+#profil h1 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 30px;
 }
 
-.profil-section {
+#blocinfos,
+#bloccommandes,
+#blocfidelite {
   background: #fff;
   border-radius: 10px;
   border: 1px solid #efe7e3;
@@ -21,7 +23,9 @@
   margin-bottom: 20px;
 }
 
-.profil-section h2 {
+#blocinfos h2,
+#bloccommandes h2,
+#blocfidelite h2 {
   font-size: 1.2rem;
   color: #333;
   margin-top: 0;
@@ -30,7 +34,7 @@
   padding-bottom: 10px;
 }
 
-.info-group p {
+#groupeinfo p {
   margin: 10px 0;
   font-size: 0.95rem;
   color: #555;
@@ -39,7 +43,7 @@
   align-items: center;
 }
 
-.edit-btn {
+#modifier {
   background: none;
   border: none;
   font-size: 1rem;
@@ -49,11 +53,11 @@
   transition: background 0.2s;
 }
 
-.edit-btn:hover {
+#modifier:hover {
   background: #f5ede7;
 }
 
-.commande {
+#commande {
   border: 1px solid #f5ede7;
   padding: 12px;
   margin-bottom: 12px;
@@ -61,13 +65,13 @@
   background: #fafaf8;
 }
 
-.commande p {
+#commande p {
   margin: 6px 0;
   font-size: 0.9rem;
   color: #555;
 }
 
-.status {
+#statut {
   display: inline-block;
   padding: 4px 8px;
   border-radius: 4px;
@@ -75,12 +79,12 @@
   font-weight: 600;
 }
 
-.status.delivered {
+#statut.livre {
   background: #d4f1d4;
   color: #2d7a2d;
 }
 
-.status.pending {
+#statut.attente {
   background: #fff3cd;
   color: #856404;
 }

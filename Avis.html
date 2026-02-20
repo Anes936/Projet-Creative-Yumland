@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="Commun.css">
         <link rel="stylesheet" type="text/css" href="Avis.css"/>
-        <title>Donnez nous votre avis</title>
+        <title>Avis</title>
     </head>
 
 <body>
@@ -36,22 +36,22 @@
 </header>
 
     <main>
-        <div id="avis-container">
+        <div id="avistitre">
             <h1>Donnez nous votre avis</h1>
             <p>Votre avis nous est précieux. N'hésitez pas à nous faire part de vos commentaires !</p>
 
-            <form id="avis-form">
-                <div class="form-group">
+            <form id="aviscorps">
+                <div id="formulaire">
                     <label for="nom">Nom :</label>
                     <input type="text" id="nom" name="nom" required>
                 </div>
 
-                <div class="form-group">
+                <div id="formulaire">
                     <label for="email">Email :</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
-                <div class="form-group">
+                <div id="formulaire">
                     <label for="note">Note :</label>
                     <select id="note" name="note" required>
                         <option value="">-- Choisissez une note --</option>
@@ -63,12 +63,12 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div id="formulaire">
                     <label for="avis">Votre avis :</label>
                     <input type="text" id="avis" name="avis" placeholder="Qu'en avez-vous pensé ?(facultatif)">
                 </div>
 
-                <button type="submit" class="btn-submit">Envoyer</button>
+                <button type="submit" id="boutonavis">Envoyer</button>
             </form>
         </div>
     </main>
