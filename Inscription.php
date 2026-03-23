@@ -1,3 +1,8 @@
+<?php
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,42 +45,42 @@
     <div id="corps">
          <h1>Inscription</h1>
 
-    <form>
+    <form action="Traitements/traitement_Inscription.php" method="POST">
         <label for="nom">Nom:</label>
-        <input type="text" id="nom" required ><br/><br/>
+        <input type="text" id="nom" name="nom" required ><br/><br/>
 
         <label for="prenom">Prénom:</label>
-        <input type="text" id="prenom" required ><br/><br/>
+        <input type="text" id="prenom" name="prenom" required ><br/><br/>
 
          <label for="date">Date de Naissance:</label>
-        <input type="date" id="date" required ><br/><br/>
+        <input type="date" id="date" name="date" required ><br/><br/>
 
         <label for="mail">Email:</label>
-        <input type="email" id="mail" required ><br/><br/>
+        <input type="email" id="mail" name="mail" required ><br/><br/>
 
         <label for="telephone">N.Telephone(facultatif):</label>
-        <input type="tel" id="telephone" "><br/><br/>
+        <input type="tel" id="telephone" name="telephone"><br/><br/>
 
         <label for="ville">Ville:</label>
-        <input type="text" id="ville" required><br/><br/>
+        <input type="text" id="ville" name="ville" required><br/><br/>
 
         <label for="postal">Code postal:</label>
-        <input type="text" id="postal" required ><br/><br/>
+        <input type="text" id="postal" name="postal" required ><br/><br/>
 
         <label for="rue">Rue:</label>
-        <input type="text" id="rue" required ><br/><br/>
+        <input type="text" id="rue" name="rue"required ><br/><br/>
 
         <label for="nrue">N.Rue:</label>
-        <input type="text" id="nrue" required ><br/><br/>
+        <input type="text" id="nrue" name="nrue"required ><br/><br/>
 
         <label for="id">Nom d'utilisateur:</label>
-        <input type="text" id="id" required ><br/><br/>
+        <input type="text" id="identifiant" name="identifiant"required ><br/><br/>
 
          <label for="emdp">Entrer un mot de passe:</label>
-        <input type="password" id="emdp" required ><br/><br/>
+        <input type="password" id="emdp" name="emdp"required ><br/><br/>
 
          <label for="cmdp">Confirmer le mot de passe:</label>
-        <input type="password" id="cmdp" required ><br/><br/>
+        <input type="password" id="cmdp" name="cmdp" required ><br/><br/>
 
         <label for="entrer"></label>
         <input type="submit" id="entrer" value="S'inscrire"/><br/><br/>
