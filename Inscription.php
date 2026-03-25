@@ -1,7 +1,4 @@
-<?php
-
-?>
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -34,10 +31,21 @@
         </a>
     </div>
 
-    <div id="header-right">
-        <a href="Connexion.html">Se connecter</a><span>/</span>
-        <a href="Inscription.html">S'inscrire</a>
-    </div>
+<div id="header-right">
+
+    <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
+        <a href="Profil.php">
+          <img src="images/logo.png" alt="Mon profil">
+        </a>
+          <span>/</span>
+        <a href="Traitements/deconnexion.php">Se déconnecter</a>
+        <?php else : ?>
+          <a href="Connexion.php">Se connecter</a>
+            <span>/</span>
+          <a href="Inscription.php">S'inscrire</a>
+    <?php endif; ?>
+
+</div>
 
 </header>
 

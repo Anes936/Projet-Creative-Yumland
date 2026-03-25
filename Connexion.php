@@ -41,14 +41,11 @@
 
         <h1>Connexion</h1>
 
-        <label for="mail/id"></label>
-        <input type="text" id="mail/id" required placeholder="Email/Nom d'utilisateur"><br/>
-
-        <label for="mdp"></label>
-        <input type="password" id="mdp" required placeholder="Mot de passe"><br/>
-
-        <label for="Connexion"></label>
-        <input type="submit" id="Connexion" value="Se connecter"/><br/>
+        <form action="Traitements/traitement_Connexion.php" method="POST">  
+         <input type="text" id="identifiant" name="identifiant" required placeholder="Email\Identifiant">
+         <input type="password" id="mdp" name="mdp" required placeholder="Mot de passe">
+         <input type="submit" id="Connexion" value="Se connecter">
+        </form>
 
         <a href="Inscription.html">Vous n'avez pas encore de compte ? Inscrivez vous ici</a>
     </div>
