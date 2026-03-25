@@ -15,7 +15,7 @@ $ville     = trim($_POST['ville']);
 $postal    = trim($_POST['postal']);
 $rue       = trim($_POST['rue']);
 $nrue      = trim($_POST['nrue']);
-$username  = trim($_POST['identifiant']);
+$identifiant  = trim($_POST['identifiant']);
 $emdp      = $_POST['emdp'];
 $cmdp      = $_POST['cmdp'];
 
@@ -41,7 +41,7 @@ $nouvel_utilisateur = [
         'ville'  => $ville,
         'postal' => $postal,
     ],
-    'username' => $username,
+    'identifiant' => $identifiant,
     'mdp'      => password_hash($emdp, PASSWORD_DEFAULT),
     'role'     => 'client',
     'points'   => 0,
@@ -64,7 +64,7 @@ $_SESSION['connecte'] = true;
 $_SESSION['nom']      = $nom;
 $_SESSION['prenom']   = $prenom;
 $_SESSION['mail']     = $mail;
-$_SESSION['username'] = $username;
+$_SESSION['identifiant'] = $identifiant;
 $_SESSION['role']     = 'client';
 
 
