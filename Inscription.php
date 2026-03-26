@@ -10,6 +10,7 @@
 
 <body>
 
+ 
             <header>
     
     <div id="header-left">
@@ -26,7 +27,7 @@
     </div>
 
     <div id="header-center">
-        <a href="Accueil.html">
+        <a href="Accueil.php">
             <img src="images/Glogo.png" alt="Logo" >
         </a>
     </div>
@@ -35,10 +36,7 @@
 
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <a href="Profil.php">
-          <img src="images/logo.png" alt="Mon profil">
-        </a>
-          <span>/</span>
-        <a href="Traitements/deconnexion.php">Se déconnecter</a>
+          <img src="images/IconeProfil.png" alt="Mon profil">
         <?php else : ?>
           <a href="Connexion.php">Se connecter</a>
             <span>/</span>

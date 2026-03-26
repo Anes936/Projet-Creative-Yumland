@@ -1,0 +1,20 @@
+[
+    {
+        "id": "69c597869697c",
+        "nom": "A",
+        "prenom": "B",
+        "date": "2026-03-15",
+        "mail": "anes@gmail.com",
+        "tel": "",
+        "adresse": {
+            "numero": "qsd",
+            "rue": "qsd",
+            "ville": "qs",
+            "postal": "dzq"
+        },
+        "identifiant": "213",
+        "mdp": "$2y$12$uCX9wWpqpwNeCngNV9lZzOJlOaBG19dp4tCKA5rFLQHw3b9jefj86",
+        "role": "client",
+        "points": 0
+    }
+]

@@ -120,13 +120,8 @@ footer {
 }
 
 #header-right a img {
+  margin-left: auto;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    object-fit: cover;
-    vertical-align: middle;
-}
-
-#header-right a img:hover {
-    opacity: 0.8;
 }

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
     <head>
@@ -7,8 +8,7 @@
     </head>
 
     <body>
-        
-             <header>
+           <header>
     
     <div id="header-left">
         <a href="Panier.html" id="panier">
@@ -24,15 +24,23 @@
     </div>
 
     <div id="header-center">
-        <a href="Accueil.html">
+        <a href="Accueil.php">
             <img src="images/Glogo.png" alt="Logo" >
         </a>
     </div>
 
-    <div id="header-right">
-        <a href="Connexion.html">Se connecter</a><span>/</span>
-        <a href="Inscription.html">S'inscrire</a>
-    </div>
+<div id="header-right">
+
+    <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
+        <a href="Profil.php">
+          <img src="images/IconeProfil.png" alt="Mon profil">
+        <?php else : ?>
+          <a href="Connexion.php">Se connecter</a>
+            <span>/</span>
+          <a href="Inscription.php">S'inscrire</a>
+    <?php endif; ?>
+
+</div>
 
 </header>
 <main>
