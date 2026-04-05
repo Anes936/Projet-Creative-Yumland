@@ -1,0 +1,137 @@
+[
+    {
+        "id": "p010",
+        "nom": "Croissant",
+        "prix": 1.40,
+        "categorie": "croissanterie",
+        "saveur": "vanille",
+        "image": "images/Croissant.png",
+        "description": "Un croissant pur beurre doré"
+    },
+    {
+        "id": "p012",
+        "nom": "Pain au chocolat",
+        "prix": 1.50,
+        "categorie": "croissanterie",
+        "saveur": "chocolat",
+        "image": "images/PainChocolat.png",
+        "description": "Un pain au chocolat feuilleté classique"
+    },
+    {
+        "id": "p013",
+        "nom": "Pain au chocolat framboise",
+        "prix": 2.50,
+        "categorie": "croissanterie",
+        "saveur": "fruits",
+        "image": "images/PainChocolatF.png",
+        "description": "Un pain au chocolat garni de framboise"
+    },
+    {
+        "id": "p014",
+        "nom": "Pain au chocolat praliné",
+        "prix": 2.50,
+        "categorie": "croissanterie",
+        "saveur": "chocolat",
+        "image": "images/PainChocolatP.png",
+        "description": "Un pain au chocolat au cœur praliné"
+    },
+    {
+        "id": "p001",
+        "nom": "Flan vanille",
+        "prix": 4.50,
+        "categorie": "cake",
+        "saveur": "vanille",
+        "image": "images/Flan.jpg",
+        "description": "Un flan crémeux à la vanille"
+    },
+    {
+        "id": "p002",
+        "nom": "Fondant au chocolat",
+        "prix": 4.00,
+        "categorie": "cake",
+        "saveur": "chocolat",
+        "image": "images/Fondantc.jpg",
+        "description": "Un fondant au cœur coulant chocolat"
+    },
+    {
+        "id": "p003",
+        "nom": "Fondant chocolat blanc",
+        "prix": 4.00,
+        "categorie": "cake",
+        "saveur": "vanille",
+        "image": "images/Fondantcb.jpeg",
+        "description": "Un fondant doux au chocolat blanc"
+    },
+    {
+        "id": "p005",
+        "nom": "Mille feuilles",
+        "prix": 4.00,
+        "categorie": "cake",
+        "saveur": "vanille",
+        "image": "images/Millefeuille.jpeg",
+        "description": "Un classique croustillant à la crème pâtissière"
+    },
+    {
+        "id": "p011",
+        "nom": "Eclair au chocolat",
+        "prix": 4.50,
+        "categorie": "cake",
+        "saveur": "chocolat",
+        "image": "images/EclairChocolat.jpg",
+        "description": "Un éclair garni de crème au chocolat"
+    },
+    {
+        "id": "p015",
+        "nom": "Paris Brest",
+        "prix": 5.50,
+        "categorie": "cake",
+        "saveur": "vanille",
+        "image": "images/ParisBrest.jpg",
+        "description": "Un Paris Brest croustillant au praliné"
+    },
+    {
+        "id": "p004",
+        "nom": "Tarte au citron",
+        "prix": 18.00,
+        "categorie": "tarte",
+        "saveur": "fruits",
+        "image": "images/Tartecitron.jpg",
+        "description": "Une tarte entière au citron meringuée"
+    },
+    {
+        "id": "p006",
+        "nom": "Tarte aux fraises",
+        "prix": 20.00,
+        "categorie": "tarte",
+        "saveur": "fruits",
+        "image": "images/Tartefraises.jpg",
+        "description": "Une tarte entière aux fraises fraîches"
+    },
+    {
+        "id": "p007",
+        "nom": "Cookie aux fruits rouges",
+        "prix": 3.50,
+        "categorie": "cookie",
+        "saveur": "fruits",
+        "image": "images/CookieFruitsRouges.png",
+        "description": "Un cookie moelleux aux fruits rouges"
+    },
+    {
+        "id": "p008",
+        "nom": "Cookie praliné noisette",
+        "prix": 3.50,
+        "categorie": "cookie",
+        "saveur": "chocolat",
+        "image": "images/CookiePralineNoisette.png",
+        "description": "Un cookie croquant au praliné noisette"
+    },
+    {
+        "id": "p009",
+        "nom": "Cookie praliné pistache",
+        "prix": 3.50,
+        "categorie": "cookie",
+        "saveur": "pistache",
+        "image": "images/CookiePralinePistache.png",
+        "description": "Un cookie fondant au praliné pistache"
+    }
+]

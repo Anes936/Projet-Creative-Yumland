@@ -1,0 +1,114 @@
+main {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+#corps {
+    background-color: #fbf6f2;
+    padding: 40px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgba(204, 112, 97, 0.3);
+}
+
+#corps h1 {
+    text-align: center;
+    color: #cc7061;
+    margin-bottom: 30px;
+}
+
+#corps h2 {
+    color: #cc7061;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.aucune {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.commande {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0px 10px rgba(204, 112, 97, 0.2);
+}
+
+.commande p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.commande ul {
+    margin: 8px 0 8px 20px;
+    color: #555;
+}
+
+.commande.livraison {
+    border-left: 6px solid #f39c12;
+}
+
+.commande.livree {
+    border-left: 6px solid #27ae60;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-actions select {
+    padding: 8px 12px;
+    border: 1px solid #cc7061;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.form-actions select:focus {
+    outline: none;
+    border-color: #a85a52;
+    box-shadow: 0 0 8px rgba(204, 112, 97, 0.3);
+}
+
+.btn-prete {
+    background-color: #cc7061;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btn-prete:hover {
+    background-color: #a85a52;
+}
+
+.statut-livraison {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #fff3cd;
+    color: #856404;
+}
+
+.statut-livre {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #d4f1d4;
+    color: #2d7a2d;
+}

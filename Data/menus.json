@@ -1,0 +1,23 @@
+[
+    {
+        "id": "m001",
+        "nom": "Box Cookies",
+        "description": "3 cookies au choix : fruits rouges, praliné noisette et praliné pistache",
+        "plats": ["p007", "p008", "p009"],
+        "prix": 8.75
+    },
+    {
+        "id": "m002",
+        "nom": "Box Découverte",
+        "description": "Un trio de nos meilleures pâtisseries : flan, fondant et éclair",
+        "plats": ["p001", "p002", "p011"],
+        "prix": 10.75
+    },
+    {
+        "id": "m003",
+        "nom": "Box Croissanterie",
+        "description": "Toute notre gamme croissanterie : croissant, pain au chocolat, framboise et praliné",
+        "plats": ["p010", "p012", "p013", "p014"],
+        "prix": 6.65
+    }
+]

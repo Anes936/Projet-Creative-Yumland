@@ -6,20 +6,25 @@ if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     exit;
 }
 
-$chemin = 'Data/users.json';
-$utilisateurs = json_decode(file_get_contents($chemin), true);
+if ($_SESSION['role'] !== 'admin') {
+    header("Location: Accueil.php");
+    exit;
+}
+
+$idUser = $_GET['id'] ?? '';
+
+$utilisateurs = json_decode(file_get_contents('Data/users.json'), true);
 
 $user = null;
 foreach ($utilisateurs as $u) {
-    if ($u['identifiant'] === $_SESSION['identifiant']) {
+    if ($u['id'] === $idUser) {
         $user = $u;
         break;
     }
 }
 
 if ($user === null) {
-    session_destroy();
-    header("Location: Connexion.php");
+    header("Location: Administrateur.php");
     exit;
 }
 
@@ -27,7 +32,7 @@ $commandes = [];
 if (file_exists('Data/commandes.json')) {
     $allCommandes = json_decode(file_get_contents('Data/commandes.json'), true);
     foreach ($allCommandes as $cmd) {
-        if ($cmd['client'] === $_SESSION['identifiant']) {
+        if ($cmd['client'] === $user['identifiant']) {
             $commandes[] = $cmd;
         }
     }
@@ -38,7 +43,7 @@ if (file_exists('Data/commandes.json')) {
 <head>
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Profil.css">
-    <title>Page de profil</title>
+    <title>Profil Administrateur <?php echo htmlspecialchars($user['nom']); ?></title>
 </head>
 <body>
 
@@ -88,69 +93,44 @@ if (file_exists('Data/commandes.json')) {
 
         <div id="profil">
 
-            <h1>Mon profil</h1>
+            <h1>Profil de <?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']); ?></h1>
 
             <section id="blocinfos">
-                <h2>Mes informations</h2>
+                <h2>Informations</h2>
                 <div id="groupeinfo">
-                    <p><strong>Nom :</strong> <?php echo htmlspecialchars($user['nom']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Prénom :</strong> <?php echo htmlspecialchars($user['prenom']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Email :</strong> <?php echo htmlspecialchars($user['mail']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Téléphone :</strong> <?php echo htmlspecialchars($user['tel']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Adresse :</strong> <?php echo htmlspecialchars($user['adresse']['numero'] . ' ' . $user['adresse']['rue'] . ', ' . $user['adresse']['postal'] . ' ' . $user['adresse']['ville']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
+                    <p><strong>Nom :</strong> <?php echo htmlspecialchars($user['nom']); ?></p>
+                    <p><strong>Prénom :</strong> <?php echo htmlspecialchars($user['prenom']); ?></p>
+                    <p><strong>Email :</strong> <?php echo htmlspecialchars($user['mail']); ?></p>
+                    <p><strong>Téléphone :</strong> <?php echo htmlspecialchars($user['tel']); ?></p>
+                    <p><strong>Adresse :</strong> <?php echo htmlspecialchars($user['adresse']['numero'] . ' ' . $user['adresse']['rue'] . ', ' . $user['adresse']['postal'] . ' ' . $user['adresse']['ville']); ?></p>
+                    <p><strong>Rôle :</strong> <?php echo htmlspecialchars($user['role']); ?></p>
+                    <p><strong>Points fidélité :</strong> <?php echo $user['points']; ?> pts</p>
                 </div>
             </section>
 
             <section id="bloccommandes">
-                <h2>Mes commandes</h2>
-
+                <h2>Commandes de cet utilisateur</h2>
                 <?php if (empty($commandes)) : ?>
-                    <p>Aucune commande pour le moment.</p>
+                    <p>Aucune commande.</p>
                 <?php else : ?>
                     <?php foreach ($commandes as $cmd) : ?>
                         <div id="commande">
                             <p><strong><?php echo htmlspecialchars($cmd['id']); ?></strong></p>
                             <p>Total : <?php echo number_format($cmd['total'], 2, ',', ''); ?> €</p>
                             <p>Mode : <?php echo htmlspecialchars($cmd['mode']); ?></p>
+                            <p>Statut : <span id="statut" class="<?php echo $cmd['statut'] === 'livree' ? 'livre' : 'attente'; ?>"><?php echo htmlspecialchars($cmd['statut']); ?></span></p>
                             <p>Date : <?php echo htmlspecialchars($cmd['date_commande']); ?></p>
-                            <p>
-                                <span id="statut" class="<?php
-                                    if ($cmd['statut'] === 'livree') echo 'livre';
-                                    elseif ($cmd['statut'] === 'en_livraison') echo 'attente';
-                                    elseif ($cmd['statut'] === 'en_preparation') echo 'attente';
-                                    elseif ($cmd['statut'] === 'abandonnee') echo 'attente';
-                                ?>">
-                                    <?php
-                                        if ($cmd['statut'] === 'en_preparation') echo 'En préparation';
-                                        elseif ($cmd['statut'] === 'en_livraison') echo 'En livraison';
-                                        elseif ($cmd['statut'] === 'livree') echo 'Livrée';
-                                        elseif ($cmd['statut'] === 'abandonnee') echo 'Abandonnée';
-                                    ?>
-                                </span>
-                            </p>
-                            <?php if ($cmd['statut'] === 'livree') : ?>
-                                <a href="Avis.php?id=<?php echo $cmd['id']; ?>" class="btn-noter">Noter cette commande</a>
-                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
-
             </section>
 
-            <section id="blocfidelite">
-                <h2>Mon compte fidélité</h2>
-                <p><strong>Points actuels :</strong> <?php echo $user['points']; ?> pts</p>
-            </section>
-
-            <a href="Traitements/traitement_Deconnexion.php">
-                <button id="deconnexion">Se déconnecter</button>
-            </a>
+            <a href="Administrateur.php"><button id="deconnexion">Retour à la liste</button></a>
 
         </div>
 
     </main>
-
-    <footer>
+<footer>
         <div id="footer-left">
             <img src="images/logo.png" alt="logo">
         </div>

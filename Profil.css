@@ -88,3 +88,40 @@
   background: #fff3cd;
   color: #856404;
 }
+
+#deconnexion {
+    width: 100%;
+    padding: 14px;
+    background-color: #cc7061;
+    color: #f5ede7;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#deconnexion:hover {
+    background-color: #a85a52;
+}
+#modifier img {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-noter {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 15px;
+    background-color: #cc7061;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-noter:hover {
+    background-color: #a85a52;
+}

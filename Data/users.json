@@ -1,20 +1,164 @@
 [
     {
-        "id": "69c597869697c",
+        "id": "c001",
         "nom": "A",
-        "prenom": "B",
-        "date": "2026-03-15",
-        "mail": "anes@gmail.com",
-        "tel": "",
+        "prenom": "A",
+        "date": "2000-01-01",
+        "mail": "a@mail.com",
+        "tel": "0600000001",
         "adresse": {
-            "numero": "qsd",
-            "rue": "qsd",
-            "ville": "qs",
-            "postal": "dzq"
+            "numero": "1",
+            "rue": "rue A",
+            "ville": "Paris",
+            "postal": "75001"
         },
-        "identifiant": "213",
-        "mdp": "$2y$12$uCX9wWpqpwNeCngNV9lZzOJlOaBG19dp4tCKA5rFLQHw3b9jefj86",
+        "identifiant": "A",
+        "mdp": "$2b$12$s3yxMT9buPkVV2P0R8XDUOgJNsSe2MA52f42vSLdi3jLV3CcjimCi",
         "role": "client",
+        "points": 0
+    },
+    {
+        "id": "c002",
+        "nom": "B",
+        "prenom": "B",
+        "date": "2000-02-02",
+        "mail": "b@mail.com",
+        "tel": "0600000002",
+        "adresse": {
+            "numero": "2",
+            "rue": "rue B",
+            "ville": "Paris",
+            "postal": "75002"
+        },
+        "identifiant": "B",
+        "mdp": "$2b$12$zrnLTe3cEsmhyH1vRd800ORJwUpyO6i4xWBcb6EHJVYZfGaI.pIAC",
+        "role": "client",
+        "points": 0
+    },
+    {
+        "id": "c003",
+        "nom": "C",
+        "prenom": "C",
+        "date": "2000-03-03",
+        "mail": "c@mail.com",
+        "tel": "0600000003",
+        "adresse": {
+            "numero": "3",
+            "rue": "rue C",
+            "ville": "Paris",
+            "postal": "75003"
+        },
+        "identifiant": "C",
+        "mdp": "$2b$12$yTTyVCklf5Rfvr0ZWRIrwO.c88n1JMxsPCOlFiPCy/eBwHN0/AHJG",
+        "role": "client",
+        "points": 0
+    },
+    {
+        "id": "c004",
+        "nom": "D",
+        "prenom": "D",
+        "date": "2000-04-04",
+        "mail": "d@mail.com",
+        "tel": "0600000004",
+        "adresse": {
+            "numero": "4",
+            "rue": "rue D",
+            "ville": "Paris",
+            "postal": "75004"
+        },
+        "identifiant": "D",
+        "mdp": "$2b$12$gGYwEQAyRZlET1Xm7Ib8eez7zYrB9BaxOsEvzENCObsTb6jpn1lmK",
+        "role": "client",
+        "points": 0
+    },
+    {
+        "id": "c005",
+        "nom": "E",
+        "prenom": "E",
+        "date": "2000-05-05",
+        "mail": "e@mail.com",
+        "tel": "0600000005",
+        "adresse": {
+            "numero": "5",
+            "rue": "rue E",
+            "ville": "Paris",
+            "postal": "75005"
+        },
+        "identifiant": "E",
+        "mdp": "$2b$12$hPSWpGfbP0lbdH2yjIQHMerl3Wr9KDuWFYfib.Ccj2Fh37O5Zv5.S",
+        "role": "client",
+        "points": 0
+    },
+    {
+        "id": "a001",
+        "nom": "Aoualid",
+        "prenom": "Anes",
+        "date": "2005-01-01",
+        "mail": "anes@fondant.fr",
+        "tel": "0656789012",
+        "adresse": {
+            "numero": "1",
+            "rue": "rue du Commerce",
+            "ville": "Paris",
+            "postal": "75015"
+        },
+        "identifiant": "Anes",
+        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "role": "admin",
+        "points": 0
+    },
+    {
+        "id": "a002",
+        "nom": "Admin",
+        "prenom": "Admin",
+        "date": "1990-07-25",
+        "mail": "admin@fondant.fr",
+        "tel": "0667890123",
+        "adresse": {
+            "numero": "8",
+            "rue": "rue de Rivoli",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "identifiant": "Admin",
+        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "role": "admin",
+        "points": 0
+    },
+    {
+        "id": "r001",
+        "nom": "Restaurateur",
+        "prenom": "Chef",
+        "date": "1988-12-03",
+        "mail": "chef@fondant.fr",
+        "tel": "0678901234",
+        "adresse": {
+            "numero": "15",
+            "rue": "rue du Four",
+            "ville": "Paris",
+            "postal": "75006"
+        },
+        "identifiant": "Restaurateur",
+        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "role": "restaurateur",
+        "points": 0
+    },
+    {
+        "id": "l001",
+        "nom": "Livreur",
+        "prenom": "Livreur1",
+        "date": "1999-06-17",
+        "mail": "livreur@fondant.fr",
+        "tel": "0689012345",
+        "adresse": {
+            "numero": "22",
+            "rue": "rue de Belleville",
+            "ville": "Paris",
+            "postal": "75020"
+        },
+        "identifiant": "Livreur",
+        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "role": "livreur",
         "points": 0
     }
 ]

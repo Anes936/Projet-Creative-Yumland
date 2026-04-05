@@ -1,0 +1,113 @@
+[
+    {
+        "id": "CMD-69D2347A10846",
+        "client": "A",
+        "nom_client": "A A",
+        "articles": [
+            {
+                "id": "p007",
+                "nom": "Cookie aux fruits rouges",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p008",
+                "nom": "Cookie praliné noisette",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p009",
+                "nom": "Cookie praliné pistache",
+                "prix": 3.5,
+                "qte": 1
+            }
+        ],
+        "total": 10.5,
+        "mode": "livraison",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "1",
+            "rue": "rue A",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-04-05 10:07:54"
+    },
+    {
+        "id": "CMD-69D235B4F1A02",
+        "client": "A",
+        "nom_client": "A A",
+        "articles": [
+            {
+                "id": "p001",
+                "nom": "Flan vanille",
+                "prix": 4.5,
+                "qte": 2
+            },
+            {
+                "id": "p002",
+                "nom": "Fondant au chocolat",
+                "prix": 4,
+                "qte": 2
+            },
+            {
+                "id": "p011",
+                "nom": "Eclair au chocolat",
+                "prix": 4.5,
+                "qte": 2
+            }
+        ],
+        "total": 26,
+        "mode": "livraison",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "1",
+            "rue": "rue A",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-04-05 10:13:08"
+    },
+    {
+        "id": "CMD-69D2362687A47",
+        "client": "A",
+        "nom_client": "A A",
+        "articles": [
+            {
+                "id": "p001",
+                "nom": "Flan vanille",
+                "prix": 4.5,
+                "qte": 1
+            },
+            {
+                "id": "p002",
+                "nom": "Fondant au chocolat",
+                "prix": 4,
+                "qte": 1
+            },
+            {
+                "id": "p011",
+                "nom": "Eclair au chocolat",
+                "prix": 4.5,
+                "qte": 1
+            }
+        ],
+        "total": 13,
+        "mode": "livraison",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "1",
+            "rue": "rue A",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-04-05 10:15:02"
+    }
+]

@@ -1,5 +1,3 @@
-/* ===== CONTENU PRINCIPAL ===== */
-
 main {
     display: flex;
     justify-content: center;
@@ -9,13 +7,11 @@ main {
 #corps {
     background-color: #fbf6f2;
     padding: 40px;
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1100px;
     border-radius: 15px;
     box-shadow: 0 0px 20px rgba(204, 112, 97, 0.3);
 }
-
-/* ===== TITRES ===== */
 
 #corps h1 {
     text-align: center;
@@ -27,8 +23,6 @@ main {
     color: #cc7061;
     margin-bottom: 20px;
 }
-
-/* ===== TABLEAU ===== */
 
 table {
     width: 100%;
@@ -42,6 +36,7 @@ th {
     background-color: #cc7061;
     color: white;
     padding: 12px;
+    text-align: center;
 }
 
 td {
@@ -54,14 +49,42 @@ tr:hover {
     background-color: #fdf0ed;
 }
 
-/* ===== LIENS ===== */
-
-table a {
+.btn-voir {
     text-decoration: none;
     color: #cc7061;
     font-weight: bold;
+    margin-right: 8px;
 }
 
-table a:hover {
+.btn-voir:hover {
     text-decoration: underline;
+}
+
+.btn-bloquer {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+.btn-bloquer:hover {
+    background-color: #c0392b;
+}
+
+.btn-statut {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-statut:hover {
+    background-color: #d68910;
 }

@@ -21,12 +21,14 @@ main {
 
 #corps h2 {
     color: #cc7061;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
 }
 
-/* Bloc commande */
-
-.commande {
+#resume,
+#mode,
+#adresse,
+#creneau {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -34,26 +36,74 @@ main {
     box-shadow: 0 0px 10px rgba(204, 112, 97, 0.2);
 }
 
-.commande p {
-    margin-bottom: 8px;
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
 }
 
-.livraison {
-    border-left: 6px solid #cc7061;
-}
-
-/* Bouton */
-
-button {
+.ligne.total {
+    border-top: 2px solid #cc7061;
     margin-top: 10px;
-    background-color: #cc7061;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
+    padding-top: 12px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+#mode label,
+#creneau label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #b85f52;
+#mode input[type="radio"],
+#creneau input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #cc7061;
+}
+
+#adresse p {
+    color: #555;
+    font-size: 1rem;
+}
+
+#dateheure {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#dateheure input {
+    padding: 10px;
+    border: 1px solid #cc7061;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#dateheure input:focus {
+    outline: none;
+    border-color: #a85a52;
+    box-shadow: 0 0 8px rgba(204, 112, 97, 0.3);
+}
+
+#confirmer {
+    width: 100%;
+    padding: 14px;
+    background-color: #cc7061;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#confirmer:hover {
+    background-color: #a85a52;
 }

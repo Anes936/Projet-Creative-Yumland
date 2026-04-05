@@ -1,118 +1,123 @@
-/* ===== CENTRAGE GLOBAL ===== */
-
 main {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+    margin: 30px 0;
+    padding: 0 10px;
 }
-
-
-/* ===== CARTE PRINCIPALE ===== */
 
 #corps {
-    background-color: rgba(251, 246, 242, 0.95);
-
-    border-radius: 15px;
-    padding: 40px;
-
-    max-width: 650px;
+    background-color: #fbf6f2;
+    padding: 25px;
     width: 100%;
-
-    box-shadow: 0 8px 30px rgba(204, 112, 97, 0.3);
-
-    box-sizing: border-box;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgba(204, 112, 97, 0.3);
 }
 
-
-/* ===== TITRES ===== */
-
-h1 {
-    color: #a85a52;
+#corps h1 {
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 2.2em;
-}
-
-h2 {
     color: #cc7061;
-    text-align: center;
     margin-bottom: 25px;
+    font-size: 1.6rem;
 }
 
+.aucune {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
 
-/* ===== BLOC COMMANDE ===== */
-
-.commande {
+.livraison {
     background-color: white;
-
-    border: 1px solid #cc7061;
-    border-radius: 10px;
-
     padding: 20px;
     margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0px 10px rgba(204, 112, 97, 0.2);
 }
 
-.commande p {
-    margin: 8px 0;
-    font-size: 1em;
-    color: #333;
-}
-
-.commande strong {
-    color: #a85a52;
-}
-
-
-/* ===== ZONE BOUTONS ===== */
-
-.actionslivraison {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-
-/* ===== BOUTONS ===== */
-
-#maps,
-#valider {
-    flex: 1;
-
-    padding: 14px;
-
-    border: none;
-    border-radius: 8px;
-
-    font-size: 1em;
+.id-commande {
     font-weight: bold;
+    color: #cc7061;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0e6e3;
+}
+
+.info:last-of-type {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95rem;
+    min-width: 100px;
+}
+
+.valeur {
+    color: #333;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+.btn-maps {
+    display: block;
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.btn-maps:hover {
+    background-color: #2980b9;
+}
+
+.livraison form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-livre {
+    width: 100%;
+    padding: 18px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-
-    transition: all 0.2s ease;
 }
 
+.btn-livre:hover {
+    background-color: #219a52;
+}
 
-/* Bouton Maps */
-
-#maps {
-    background-color: #2196F3;
+.btn-abandon {
+    width: 100%;
+    padding: 18px;
+    background-color: #e74c3c;
     color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-#maps:hover {
-    background-color: #1976D2;
-}
-
-
-/* Bouton Validation */
-
-#valider {
-    background-color: #cc7061;
-    color: white;
-}
-
-#valider:hover {
-    background-color: #a85a52;
+.btn-abandon:hover {
+    background-color: #c0392b;
 }
