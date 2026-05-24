@@ -1,5 +1,7 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
+require __DIR__ . "/Traitements/calcul_panier.php";
 
 if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     header("Location: Connexion.php");
@@ -12,6 +14,7 @@ if (!isset($_SESSION['panier']) || empty($_SESSION['panier'])) {
 }
 
 $plats = json_decode(file_get_contents('Data/plats.json'), true);
+$menus = json_decode(file_get_contents('Data/menus.json'), true);
 $platsParId = [];
 foreach ($plats as $p) {
     $platsParId[$p['id']] = $p;
@@ -26,12 +29,10 @@ foreach ($utilisateurs as $u) {
     }
 }
 
-$total = 0;
-foreach ($_SESSION['panier'] as $id => $qte) {
-    if (isset($platsParId[$id])) {
-        $total += $platsParId[$id]['prix'] * $qte;
-    }
-}
+$calcul = calculerTotalPanier($_SESSION['panier'], $platsParId, $menus);
+$total = $calcul['total'];
+$boxesAppliquees = $calcul['boxes'];
+$economie = $calcul['economie'];
 ?>
 <!doctype html>
 <html>
@@ -39,6 +40,8 @@ foreach ($_SESSION['panier'] as $id => $qte) {
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Commandes.css">
     <title>Valider ma commande</title>
+    <script src="JS/theme.js" defer></script>
+    <script src="JS/validation.js" defer></script>
 </head>
 <body>
 
@@ -63,7 +66,8 @@ foreach ($_SESSION['panier'] as $id => $qte) {
             </a>
         </div>
 
-        <div id="header-right">
+        <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>
@@ -99,6 +103,12 @@ foreach ($_SESSION['panier'] as $id => $qte) {
                             <span><?php echo number_format($plat['prix'] * $qte, 2, ',', ''); ?> €</span>
                         </div>
                     <?php endif; ?>
+                <?php endforeach; ?>
+                <?php foreach ($boxesAppliquees as $box) : ?>
+                    <div class="ligne">
+                        <span><?php echo htmlspecialchars($box['nom']); ?> x<?php echo $box['nb']; ?> (réduction)</span>
+                        <span>-<?php echo number_format($box['economie'], 2, ',', ''); ?> €</span>
+                    </div>
                 <?php endforeach; ?>
                 <div class="ligne total">
                     <span><strong>Total</strong></span>

@@ -1,101 +1,11 @@
 [
     {
-        "id": "c001",
-        "nom": "A",
-        "prenom": "A",
-        "date": "2000-01-01",
-        "mail": "a@mail.com",
-        "tel": "0600000001",
-        "adresse": {
-            "numero": "1",
-            "rue": "rue A",
-            "ville": "Paris",
-            "postal": "75001"
-        },
-        "identifiant": "A",
-        "mdp": "$2b$12$s3yxMT9buPkVV2P0R8XDUOgJNsSe2MA52f42vSLdi3jLV3CcjimCi",
-        "role": "client",
-        "points": 0
-    },
-    {
-        "id": "c002",
-        "nom": "B",
-        "prenom": "B",
-        "date": "2000-02-02",
-        "mail": "b@mail.com",
-        "tel": "0600000002",
-        "adresse": {
-            "numero": "2",
-            "rue": "rue B",
-            "ville": "Paris",
-            "postal": "75002"
-        },
-        "identifiant": "B",
-        "mdp": "$2b$12$zrnLTe3cEsmhyH1vRd800ORJwUpyO6i4xWBcb6EHJVYZfGaI.pIAC",
-        "role": "client",
-        "points": 0
-    },
-    {
-        "id": "c003",
-        "nom": "C",
-        "prenom": "C",
-        "date": "2000-03-03",
-        "mail": "c@mail.com",
-        "tel": "0600000003",
-        "adresse": {
-            "numero": "3",
-            "rue": "rue C",
-            "ville": "Paris",
-            "postal": "75003"
-        },
-        "identifiant": "C",
-        "mdp": "$2b$12$yTTyVCklf5Rfvr0ZWRIrwO.c88n1JMxsPCOlFiPCy/eBwHN0/AHJG",
-        "role": "client",
-        "points": 0
-    },
-    {
-        "id": "c004",
-        "nom": "D",
-        "prenom": "D",
-        "date": "2000-04-04",
-        "mail": "d@mail.com",
-        "tel": "0600000004",
-        "adresse": {
-            "numero": "4",
-            "rue": "rue D",
-            "ville": "Paris",
-            "postal": "75004"
-        },
-        "identifiant": "D",
-        "mdp": "$2b$12$gGYwEQAyRZlET1Xm7Ib8eez7zYrB9BaxOsEvzENCObsTb6jpn1lmK",
-        "role": "client",
-        "points": 0
-    },
-    {
-        "id": "c005",
-        "nom": "E",
-        "prenom": "E",
-        "date": "2000-05-05",
-        "mail": "e@mail.com",
-        "tel": "0600000005",
-        "adresse": {
-            "numero": "5",
-            "rue": "rue E",
-            "ville": "Paris",
-            "postal": "75005"
-        },
-        "identifiant": "E",
-        "mdp": "$2b$12$hPSWpGfbP0lbdH2yjIQHMerl3Wr9KDuWFYfib.Ccj2Fh37O5Zv5.S",
-        "role": "client",
-        "points": 0
-    },
-    {
         "id": "a001",
-        "nom": "Aoualid",
+        "nom": "Oualid",
         "prenom": "Anes",
         "date": "2005-01-01",
-        "mail": "anes@fondant.fr",
-        "tel": "0656789012",
+        "mail": "anes.oualid1@gmail.com",
+        "tel": "",
         "adresse": {
             "numero": "1",
             "rue": "rue du Commerce",
@@ -103,34 +13,36 @@
             "postal": "75015"
         },
         "identifiant": "Anes",
-        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "mdp": "$2y$12$sjVn1k80yYbgVQqkWcxhDOqySqGmudeQv7rApQNU0cIruFeGN9LA2",
         "role": "admin",
-        "points": 0
+        "points": 0,
+        "bloque": false
     },
     {
-        "id": "a002",
-        "nom": "Admin",
-        "prenom": "Admin",
-        "date": "1990-07-25",
-        "mail": "admin@fondant.fr",
-        "tel": "0667890123",
+        "id": "c001",
+        "nom": "Utilisateur",
+        "prenom": "Utilisateur",
+        "date": "2000-01-01",
+        "mail": "utilisateur@gmail.com",
+        "tel": "0600000001",
         "adresse": {
-            "numero": "8",
-            "rue": "rue de Rivoli",
+            "numero": "1",
+            "rue": "rue de la Paix",
             "ville": "Paris",
-            "postal": "75001"
+            "postal": "75002"
         },
-        "identifiant": "Admin",
-        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
-        "role": "admin",
-        "points": 0
+        "identifiant": "Utilisateur",
+        "mdp": "$2y$12$Y0tvACHOfbjl5omkt3fxs.l95jLOMtwaE5NmsiVv0U3Kcwvdd9K42",
+        "role": "client",
+        "points": 0,
+        "bloque": false
     },
     {
         "id": "r001",
         "nom": "Restaurateur",
-        "prenom": "Chef",
+        "prenom": "Restaurateur",
         "date": "1988-12-03",
-        "mail": "chef@fondant.fr",
+        "mail": "restaurateur@gmail.com",
         "tel": "0678901234",
         "adresse": {
             "numero": "15",
@@ -139,17 +51,18 @@
             "postal": "75006"
         },
         "identifiant": "Restaurateur",
-        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "mdp": "$2y$12$pBmIkjsO7lJuqDC9EhAO5e6XUIwdqRUc7PIC5j0An.G70JvOmZssK",
         "role": "restaurateur",
-        "points": 0
+        "points": 0,
+        "bloque": false
     },
     {
         "id": "l001",
         "nom": "Livreur",
-        "prenom": "Livreur1",
+        "prenom": "Livreur",
         "date": "1999-06-17",
-        "mail": "livreur@fondant.fr",
-        "tel": "0689012345",
+        "mail": "livreur@gmail.com",
+        "tel": "",
         "adresse": {
             "numero": "22",
             "rue": "rue de Belleville",
@@ -157,8 +70,28 @@
             "postal": "75020"
         },
         "identifiant": "Livreur",
-        "mdp": "$2b$12$Wq1tWFHlBPz91qBT7azHXepuPCvdIEJs5vcnp2DW9RkAenH.Y7Y7y",
+        "mdp": "$2y$12$WSBkw0hGV.PSk0ohualXwuy1jjLvy4HL87Ztc1lCtTPW.t8QM\/8BS",
         "role": "livreur",
-        "points": 0
+        "points": 0,
+        "bloque": false
+    },
+    {
+        "id": "a002",
+        "nom": "Admin",
+        "prenom": "Admin",
+        "date": "1990-07-25",
+        "mail": "admin@gmail.com",
+        "tel": "",
+        "adresse": {
+            "numero": "8",
+            "rue": "rue de Rivoli",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "identifiant": "Admin",
+        "mdp": "$2y$12$GiBIaV1kENm7wqdvWfjO1eHQyzx7N79jjyokW5gDlZQwma75gT79m",
+        "role": "admin",
+        "points": 0,
+        "bloque": false
     }
 ]

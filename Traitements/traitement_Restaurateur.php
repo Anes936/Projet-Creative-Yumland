@@ -15,7 +15,7 @@ $idCommande = $_POST['id_commande'] ?? '';
 $action     = $_POST['action'] ?? '';
 $livreur    = $_POST['livreur'] ?? '';
 
-if ($action === 'prete' && $livreur === '') {
+if ($action === 'assigner' && $livreur === '') {
     header("Location: ../CommandeRestaurateur.php");
     exit;
 }
@@ -25,13 +25,21 @@ $commandes = json_decode(file_get_contents($chemin), true);
 
 foreach ($commandes as &$cmd) {
     if ($cmd['id'] === $idCommande) {
-        if ($action === 'prete') {
-            $cmd['statut'] = 'en_livraison';
+
+        if ($action === 'demarrer' && $cmd['statut'] === 'payee') {
+            $cmd['statut'] = 'en_preparation';
+
+        } elseif ($action === 'prete' && $cmd['statut'] === 'en_preparation') {
+            $cmd['statut'] = 'prete';
+
+        } elseif ($action === 'assigner' && $cmd['statut'] === 'prete') {
+            $cmd['statut']  = 'en_livraison';
             $cmd['livreur'] = $livreur;
         }
         break;
     }
 }
+unset($cmd);
 
 file_put_contents(
     $chemin,
@@ -40,4 +48,3 @@ file_put_contents(
 
 header("Location: ../CommandeRestaurateur.php");
 exit;
-?>

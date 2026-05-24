@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
 
 if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     header("Location: Connexion.php");
@@ -32,8 +33,16 @@ require('Traitements/getapikey.php');
 $vendeur = 'MI-3_A';
 $api_key     = getAPIKey($vendeur);
 $transaction = preg_replace('/[^a-zA-Z0-9]/', '', $commande['id']);
-$montant     = number_format($commande['total'], 2, '.', '');
-$retour      = 'http://localhost:8000/retour_paiement.php?id_commande=' . $idCommande;
+
+if ($commande['statut'] === 'en_attente_paiement_supplement' && isset($commande['supplement'])) {
+    $montant = number_format($commande['supplement'], 2, '.', '');
+    $estSupplement = true;
+} else {
+    $montant = number_format($commande['total'], 2, '.', '');
+    $estSupplement = false;
+}
+
+$retour      = 'http://localhost:8000/retour_Paiement.php?id_commande=' . $idCommande;
 $control     = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
 ?>
 <!doctype html>
@@ -42,6 +51,7 @@ $control     = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vende
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Commandes.css">
     <title>Paiement</title>
+    <script src="JS/theme.js" defer></script>
 </head>
 <body>
 
@@ -59,7 +69,8 @@ $control     = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vende
             </a>
         </div>
 
-        <div id="header-right">
+        <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
             <a href="Profil.php">
                 <img src="images/IconeProfil.png" alt="Mon profil">
             </a>
@@ -74,7 +85,11 @@ $control     = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vende
 
             <section id="resume">
                 <h2>Commande <?php echo htmlspecialchars($commande['id']); ?></h2>
-                <p><strong>Total à payer :</strong> <?php echo number_format($commande['total'], 2, ',', ''); ?> €</p>
+                <?php if ($estSupplement) : ?>
+                    <p><strong>Supplément à payer (modification) :</strong> <?php echo number_format($commande['supplement'], 2, ',', ''); ?> €</p>
+                <?php else : ?>
+                    <p><strong>Total à payer :</strong> <?php echo number_format($commande['total'], 2, ',', ''); ?> €</p>
+                <?php endif; ?>
             </section>
 
             <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">

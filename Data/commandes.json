@@ -109,5 +109,132 @@
         "statut": "en_attente_paiement",
         "livreur": "",
         "date_commande": "2026-04-05 10:15:02"
+    },
+    {
+        "id": "CMD-6A12DFA03A0ED",
+        "client": "A",
+        "nom_client": "A A",
+        "articles": [
+            {
+                "id": "p015",
+                "nom": "Paris Brest",
+                "prix": 5.5,
+                "qte": 1
+            },
+            {
+                "id": "p007",
+                "nom": "Cookie aux fruits rouges",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p008",
+                "nom": "Cookie praliné noisette",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p009",
+                "nom": "Cookie praliné pistache",
+                "prix": 3.5,
+                "qte": 1
+            }
+        ],
+        "total": 16,
+        "mode": "surplace",
+        "creneau": "2026-05-07 ",
+        "adresse": {
+            "numero": "1",
+            "rue": "rue A",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-05-24 11:23:12"
+    },
+    {
+        "id": "CMD-6A12E2E213058",
+        "client": "Admin",
+        "nom_client": "Admin Admin",
+        "articles": [
+            {
+                "id": "p007",
+                "nom": "Cookie aux fruits rouges",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p008",
+                "nom": "Cookie praliné noisette",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p009",
+                "nom": "Cookie praliné pistache",
+                "prix": 3.5,
+                "qte": 1
+            }
+        ],
+        "total": 10.5,
+        "mode": "livraison",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "8",
+            "rue": "rue de Rivoli",
+            "ville": "Paris",
+            "postal": "75001"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-05-24 11:37:06"
+    },
+    {
+        "id": "CMD-6A12EC9AC3B4F",
+        "client": "Anes",
+        "nom_client": "Oualid Anes",
+        "articles": [
+            {
+                "id": "p007",
+                "nom": "Cookie aux fruits rouges",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p008",
+                "nom": "Cookie praliné noisette",
+                "prix": 3.5,
+                "qte": 1
+            },
+            {
+                "id": "p009",
+                "nom": "Cookie praliné pistache",
+                "prix": 3.5,
+                "qte": 1
+            }
+        ],
+        "boxes": [
+            {
+                "id": "m001",
+                "nom": "Box Cookies",
+                "nb": 1,
+                "prix_box": 8.75,
+                "prix_initial": 10.5,
+                "economie": 1.75
+            }
+        ],
+        "total": 8.75,
+        "mode": "livraison",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "1",
+            "rue": "rue du Commerce",
+            "ville": "Paris",
+            "postal": "75015"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-05-24 12:18:34"
     }
 ]

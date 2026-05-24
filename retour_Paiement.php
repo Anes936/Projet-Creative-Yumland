@@ -22,8 +22,9 @@ if ($idCommande !== '') {
     foreach ($commandes as &$cmd) {
         if ($cmd['id'] === $idCommande) {
             if ($paiementValide) {
-                $cmd['statut'] = 'en_preparation';
+                $cmd['statut'] = 'payee';
                 $cmd['paiement'] = 'accepte';
+                unset($cmd['supplement']);
             } else {
                 $cmd['statut'] = 'paiement_refuse';
                 $cmd['paiement'] = 'refuse';
@@ -46,6 +47,7 @@ unset($_SESSION['id_commande_paiement']);
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Commandes.css">
     <title>Retour paiement</title>
+    <script src="JS/theme.js" defer></script>
 </head>
 <body>
 
@@ -63,7 +65,8 @@ unset($_SESSION['id_commande_paiement']);
             </a>
         </div>
 
-        <div id="header-right">
+        <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
             <a href="Profil.php">
                 <img src="images/IconeProfil.png" alt="Mon profil">
             </a>

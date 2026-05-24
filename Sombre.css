@@ -1,0 +1,274 @@
+body {
+    background-image: url('images/fond.sombree.jpg');
+    background-color: #1f1e1d;
+    color: #ece8e3;
+}
+
+header {
+    background-color: #2b2826;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
+}
+
+#header-left form {
+    border: 1px solid #e88e7f;
+}
+
+#header-left input[type="text"] {
+    background-color: #3a3633;
+    color: #ece8e3;
+}
+
+#header-left input[type="text"]::placeholder {
+    color: #b8b3ad;
+}
+
+#header-right a {
+    color: #e88e7f;
+}
+
+#header-right a:hover {
+    color: #f0a596;
+}
+
+#header-right span {
+    color: #e88e7f;
+}
+
+.btn-espace {
+    background-color: #e88e7f;
+    color: #1f1e1d !important;
+}
+
+.btn-espace:hover {
+    background-color: #f0a596;
+}
+
+footer {
+    background-color: #2b2826;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.6);
+}
+
+#footer-right a {
+    color: #e88e7f;
+}
+
+#footer-right a:hover {
+    color: #f0a596;
+}
+
+h1, h2, h3, h4 {
+    color: #ece8e3;
+}
+
+main h1, main > h1, #corps h1, #profil h1 {
+    color: #e88e7f;
+}
+
+main h2, #corps h2, #profil h2, #titre {
+    color: #f0a596;
+}
+
+main h3 {
+    color: #ece8e3;
+}
+
+p, label, span {
+    color: #ece8e3;
+}
+
+#corps, #profil {
+    background-color: #2b2826 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+#blocinfos, #bloccommandes, #blocfidelite,
+.article, .commande, .livraison,
+#resume, #mode, #adresse, #creneau,
+#blocrecherche, #bloccategorie, #blocregime, #blocsaveur,
+.gateau, .box, #avistitre,
+.gateau1, .gateau2, .gateau3 {
+    background-color: #3a3633 !important;
+    border-color: #4a4441 !important;
+    color: #ece8e3;
+}
+
+.gateau1, .gateau2, .gateau3 {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.ngateau1, .ngateau2, .ngateau3 {
+    color: #ece8e3 !important;
+}
+
+#blocinfos h2, #bloccommandes h2, #blocfidelite h2 {
+    color: #ece8e3;
+    border-bottom-color: #4a4441;
+}
+
+#groupeinfo p, .commande p, .info, .ligne {
+    color: #ece8e3;
+    border-bottom-color: #4a4441;
+}
+
+.label, .valeur, .prix-unit {
+    color: #b8b3ad;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"],
+form input[type="date"],
+form input[type="search"],
+form select,
+form textarea,
+#corps input[type="text"],
+#corps input[type="password"],
+#formulaire input,
+#formulaire select,
+#formulaire textarea,
+#blocrecherche input,
+#bloccategorie input[type="search"],
+#blocsaveur input[type="search"],
+#blocrechercheproduit input,
+#dateheure input,
+.form-actions select {
+    background-color: #3a3633 !important;
+    color: #ece8e3 !important;
+    border-color: #e88e7f !important;
+}
+
+form input:focus, form select:focus, form textarea:focus,
+#corps input:focus, #formulaire input:focus, #formulaire select:focus, #formulaire textarea:focus {
+    background-color: #4a4441 !important;
+    border-color: #f0a596 !important;
+    box-shadow: 0 0 8px rgba(232, 142, 127, 0.4) !important;
+}
+
+form label, #formulaire label {
+    color: #e88e7f;
+}
+
+input[type="submit"], #entrer, #Connexion, #boutonavis,
+#confirmer, #valider, #decouvrir, #deconnexion,
+.btn-ajouter, .btn-prete, .btn-noter, #btn-modifier-infos {
+    background-color: #e88e7f;
+    color: #1f1e1d;
+}
+
+input[type="submit"]:hover, #entrer:hover, #Connexion:hover, #boutonavis:hover,
+#confirmer:hover, #valider:hover, #decouvrir:hover, #deconnexion:hover,
+.btn-ajouter:hover, .btn-prete:hover, .btn-noter:hover, #btn-modifier-infos:hover {
+    background-color: #f0a596;
+}
+
+#continuer {
+    background-color: #3a3633;
+    color: #e88e7f;
+    border-color: #e88e7f;
+}
+
+#continuer:hover {
+    background-color: #4a4441;
+}
+
+.article-actions a {
+    background-color: #e88e7f;
+    color: #1f1e1d;
+}
+
+.article-actions a:hover {
+    background-color: #f0a596;
+}
+
+.article-actions span,
+.prix-total, .prix {
+    color: #e88e7f;
+}
+
+.supprimer {
+    color: #e88e7f;
+}
+
+#total {
+    color: #ece8e3;
+    border-top-color: #e88e7f;
+}
+
+table {
+    background-color: #3a3633;
+}
+
+th {
+    background-color: #e88e7f;
+    color: #1f1e1d;
+}
+
+td {
+    color: #ece8e3;
+    border-bottom-color: #4a4441;
+}
+
+tr:hover {
+    background-color: #4a4441;
+}
+
+.btn-voir {
+    color: #e88e7f;
+}
+
+.statut.livre {
+    background: #2d4a32;
+    color: #a5d6a7;
+}
+
+.statut.attente {
+    background: #4a3f1e;
+    color: #ffd966;
+}
+
+.statut-livraison {
+    background: #4a3f1e;
+    color: #ffd966;
+}
+
+.statut-livre {
+    background: #2d4a32;
+    color: #a5d6a7;
+}
+
+.btn-maps {
+    background-color: #2c5f87;
+}
+
+.btn-maps:hover {
+    background-color: #1f4768;
+}
+
+.commande.livraison {
+    border-left-color: #ffd966;
+}
+
+.commande.livree {
+    border-left-color: #6ab17a;
+}
+
+.aucune, #vide {
+    color: #b8b3ad;
+}
+
+.box-desc {
+    color: #b8b3ad;
+}
+
+.deja-note {
+    color: #6ab17a;
+}
+
+#message-modif {
+    color: #6ab17a;
+}
+
+#btn-theme {
+    color: #1f1e1d;
+}

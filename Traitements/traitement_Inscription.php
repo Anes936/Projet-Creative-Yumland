@@ -19,6 +19,15 @@ $identifiant  = trim($_POST['identifiant']);
 $emdp         = $_POST['emdp'];
 $cmdp         = $_POST['cmdp'];
 
+if ($emdp !== $cmdp) {
+    header("Location: ../Inscription.php?erreur=mdp_diff");
+    exit;
+}
+if (strlen($emdp) < 6 || !preg_match('/[0-9]/', $emdp)) {
+    header("Location: ../Inscription.php?erreur=mdp_faible");
+    exit;
+}
+
 $chemin = '../Data/users.json';
 
 if (file_exists($chemin)) {

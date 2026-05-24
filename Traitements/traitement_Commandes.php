@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . '/calcul_panier.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: ../Commandes.php");
@@ -17,13 +18,13 @@ $date    = $_POST['date'] ?? '';
 $heure   = $_POST['heure'] ?? '';
 
 $plats = json_decode(file_get_contents('../Data/plats.json'), true);
+$menus = json_decode(file_get_contents('../Data/menus.json'), true);
 $platsParId = [];
 foreach ($plats as $p) {
     $platsParId[$p['id']] = $p;
 }
 
 $articles = [];
-$total = 0;
 foreach ($_SESSION['panier'] as $id => $qte) {
     if (isset($platsParId[$id])) {
         $articles[] = [
@@ -32,9 +33,12 @@ foreach ($_SESSION['panier'] as $id => $qte) {
             'prix' => $platsParId[$id]['prix'],
             'qte'  => $qte,
         ];
-        $total += $platsParId[$id]['prix'] * $qte;
     }
 }
+
+$calcul = calculerTotalPanier($_SESSION['panier'], $platsParId, $menus);
+$total = $calcul['total'];
+$boxesAppliquees = $calcul['boxes'];
 
 $utilisateurs = json_decode(file_get_contents('../Data/users.json'), true);
 $user = null;
@@ -50,6 +54,7 @@ $commande = [
     'client'         => $_SESSION['identifiant'],
     'nom_client'     => $user['nom'] . ' ' . $user['prenom'],
     'articles'       => $articles,
+    'boxes'          => $boxesAppliquees,
     'total'          => $total,
     'mode'           => $mode,
     'creneau'        => $creneau === 'plusTard' ? $date . ' ' . $heure : 'Dès que possible',

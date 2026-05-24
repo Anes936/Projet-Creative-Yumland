@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="Inscription.css"/>
     <link rel="stylesheet" href="Commun.css">
     <title>Page d'Inscription</title>
+    <script src="JS/theme.js" defer></script>
+    <script src="JS/validation.js" defer></script>
+    <script src="JS/compteur.js" defer></script>
 </head>
 <body>
 
@@ -29,7 +32,8 @@
             </a>
         </div>
 
-        <div id="header-right">
+        <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>

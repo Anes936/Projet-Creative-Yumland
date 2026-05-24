@@ -4,9 +4,10 @@
 <head>
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png"/>
     <link rel="apple-touch-icon" sizes="32x32" href="images/logo.png">
-    <link rel="stylesheet" type="text/css" href="Acceuil.css"/>
+    <link rel="stylesheet" type="text/css" href="Accueil.css"/>
     <link rel="stylesheet" href="Commun.css">
     <title>Page d'acceuil</title>
+    <script src="JS/theme.js" defer></script>
 </head>
 <body>
 
@@ -31,7 +32,8 @@
             </a>
         </div>
 
-       <div id="header-right">
+       <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>

@@ -1,21 +1,21 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
+require __DIR__ . "/Traitements/calcul_panier.php";
 
 $plats = json_decode(file_get_contents('Data/plats.json'), true);
+$menus = json_decode(file_get_contents('Data/menus.json'), true);
 
 $platsParId = [];
 foreach ($plats as $p) {
     $platsParId[$p['id']] = $p;
 }
 
-$total = 0;
-if (isset($_SESSION['panier'])) {
-    foreach ($_SESSION['panier'] as $id => $qte) {
-        if (isset($platsParId[$id])) {
-            $total += $platsParId[$id]['prix'] * $qte;
-        }
-    }
-}
+$panier = $_SESSION['panier'] ?? [];
+$calcul = calculerTotalPanier($panier, $platsParId, $menus);
+$total = $calcul['total'];
+$boxesAppliquees = $calcul['boxes'];
+$economie = $calcul['economie'];
 ?>
 <!doctype html>
 <html>
@@ -23,6 +23,7 @@ if (isset($_SESSION['panier'])) {
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Panier.css">
     <title>Mon Panier</title>
+    <script src="JS/theme.js" defer></script>
 </head>
 <body>
 
@@ -47,7 +48,8 @@ if (isset($_SESSION['panier'])) {
             </a>
         </div>
 
-        <div id="header-right">
+        <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>
@@ -99,6 +101,19 @@ if (isset($_SESSION['panier'])) {
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
+
+                <?php if (!empty($boxesAppliquees)) : ?>
+                    <div id="reductions-box">
+                        <h3>Réductions Box appliquées</h3>
+                        <?php foreach ($boxesAppliquees as $box) : ?>
+                            <div class="ligne-box">
+                                <span><?php echo htmlspecialchars($box['nom']); ?> x<?php echo $box['nb']; ?></span>
+                                <span class="economie">-<?php echo number_format($box['economie'], 2, ',', ''); ?> €</span>
+                            </div>
+                        <?php endforeach; ?>
+                        <p class="total-economie"><strong>Économie totale :</strong> <?php echo number_format($economie, 2, ',', ''); ?> €</p>
+                    </div>
+                <?php endif; ?>
 
                 <div id="total">
                     <p><strong>Total :</strong> <?php echo number_format($total, 2, ',', ''); ?> €</p>
