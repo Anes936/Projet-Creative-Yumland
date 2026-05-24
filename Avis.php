@@ -3,6 +3,7 @@ session_start();
 
 $idCommande = $_GET['id'] ?? '';
 $commande = null;
+$dejaNotee = false;
 
 if ($idCommande !== '' && isset($_SESSION['connecte']) && $_SESSION['connecte']) {
     if (file_exists('Data/commandes.json')) {
@@ -10,6 +11,9 @@ if ($idCommande !== '' && isset($_SESSION['connecte']) && $_SESSION['connecte'])
         foreach ($commandes as $cmd) {
             if ($cmd['id'] === $idCommande && $cmd['client'] === $_SESSION['identifiant']) {
                 $commande = $cmd;
+                if (!empty($cmd['note'])) {
+                    $dejaNotee = true;
+                }
                 break;
             }
         }
@@ -22,6 +26,9 @@ if ($idCommande !== '' && isset($_SESSION['connecte']) && $_SESSION['connecte'])
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Avis.css">
     <title>Avis</title>
+    <script src="JS/theme.js" defer></script>
+    <script src="JS/validation.js" defer></script>
+    <script src="JS/compteur.js" defer></script>
 </head>
 <body>
 
@@ -46,7 +53,8 @@ if ($idCommande !== '' && isset($_SESSION['connecte']) && $_SESSION['connecte'])
             </a>
         </div>
 
-       <div id="header-right">
+       <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>
@@ -70,7 +78,14 @@ if ($idCommande !== '' && isset($_SESSION['connecte']) && $_SESSION['connecte'])
     <main>
         <div id="avistitre">
 
-            <?php if ($commande !== null) : ?>
+            <?php if ($commande !== null && $dejaNotee) : ?>
+
+                <h1>Commande déjà notée</h1>
+                <p>Vous avez déjà donné votre avis pour la commande <?php echo htmlspecialchars($commande['id']); ?>.
+                Une commande ne peut être notée qu'une seule fois.</p>
+                <p><a href="Profil.php">Retour à mon profil</a></p>
+
+            <?php elseif ($commande !== null) : ?>
 
                 <h1>Noter ma commande</h1>
                 <p>Commande <?php echo htmlspecialchars($commande['id']); ?> du <?php echo htmlspecialchars($commande['date_commande']); ?></p>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
 
 if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     header("Location: Connexion.php");
@@ -39,6 +40,10 @@ if (file_exists('Data/commandes.json')) {
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Profil.css">
     <title>Page de profil</title>
+    <script src="JS/theme.js" defer></script>
+    <script src="JS/validation.js" defer></script>
+    <script src="JS/compteur.js" defer></script>
+    <script src="JS/profil.js" defer></script>
 </head>
 <body>
 
@@ -63,7 +68,8 @@ if (file_exists('Data/commandes.json')) {
             </a>
         </div>
 
-        <div id="header-right">
+        <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>
@@ -93,12 +99,14 @@ if (file_exists('Data/commandes.json')) {
             <section id="blocinfos">
                 <h2>Mes informations</h2>
                 <div id="groupeinfo">
-                    <p><strong>Nom :</strong> <?php echo htmlspecialchars($user['nom']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Prénom :</strong> <?php echo htmlspecialchars($user['prenom']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Email :</strong> <?php echo htmlspecialchars($user['mail']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Téléphone :</strong> <?php echo htmlspecialchars($user['tel']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
-                    <p><strong>Adresse :</strong> <?php echo htmlspecialchars($user['adresse']['numero'] . ' ' . $user['adresse']['rue'] . ', ' . $user['adresse']['postal'] . ' ' . $user['adresse']['ville']); ?> <button id="modifier"><img src="images/Crayon.png" alt="Modifier"></button></p>
+                    <p><strong>Nom :</strong> <span class="valeur-info" data-champ="nom"><?php echo htmlspecialchars($user['nom']); ?></span></p>
+                    <p><strong>Prénom :</strong> <span class="valeur-info" data-champ="prenom"><?php echo htmlspecialchars($user['prenom']); ?></span></p>
+                    <p><strong>Email :</strong> <span class="valeur-info" data-champ="mail"><?php echo htmlspecialchars($user['mail']); ?></span></p>
+                    <p><strong>Téléphone :</strong> <span class="valeur-info" data-champ="tel"><?php echo htmlspecialchars($user['tel']); ?></span></p>
+                    <p><strong>Adresse :</strong> <span class="valeur-info" data-champ="adresse"><?php echo htmlspecialchars($user['adresse']['numero'] . ' ' . $user['adresse']['rue'] . ', ' . $user['adresse']['postal'] . ' ' . $user['adresse']['ville']); ?></span></p>
                 </div>
+                <button id="btn-modifier-infos">Modifier mes informations</button>
+                <p id="message-modif"></p>
             </section>
 
             <section id="bloccommandes">
@@ -108,28 +116,37 @@ if (file_exists('Data/commandes.json')) {
                     <p>Aucune commande pour le moment.</p>
                 <?php else : ?>
                     <?php foreach ($commandes as $cmd) : ?>
-                        <div id="commande">
+                        <div class="commande">
                             <p><strong><?php echo htmlspecialchars($cmd['id']); ?></strong></p>
                             <p>Total : <?php echo number_format($cmd['total'], 2, ',', ''); ?> €</p>
                             <p>Mode : <?php echo htmlspecialchars($cmd['mode']); ?></p>
                             <p>Date : <?php echo htmlspecialchars($cmd['date_commande']); ?></p>
                             <p>
-                                <span id="statut" class="<?php
+                                <span class="statut <?php
                                     if ($cmd['statut'] === 'livree') echo 'livre';
                                     elseif ($cmd['statut'] === 'en_livraison') echo 'attente';
                                     elseif ($cmd['statut'] === 'en_preparation') echo 'attente';
+                                    elseif ($cmd['statut'] === 'payee') echo 'attente';
                                     elseif ($cmd['statut'] === 'abandonnee') echo 'attente';
                                 ?>">
                                     <?php
-                                        if ($cmd['statut'] === 'en_preparation') echo 'En préparation';
+                                        if ($cmd['statut'] === 'payee') echo 'Payée';
+                                        elseif ($cmd['statut'] === 'en_preparation') echo 'En préparation';
                                         elseif ($cmd['statut'] === 'en_livraison') echo 'En livraison';
                                         elseif ($cmd['statut'] === 'livree') echo 'Livrée';
                                         elseif ($cmd['statut'] === 'abandonnee') echo 'Abandonnée';
                                     ?>
                                 </span>
                             </p>
+                            <?php if ($cmd['statut'] === 'payee') : ?>
+                                <a href="ModifierCommande.php?id=<?php echo $cmd['id']; ?>" class="btn-noter">Modifier cette commande</a>
+                            <?php endif; ?>
                             <?php if ($cmd['statut'] === 'livree') : ?>
-                                <a href="Avis.php?id=<?php echo $cmd['id']; ?>" class="btn-noter">Noter cette commande</a>
+                                <?php if (!empty($cmd['note'])) : ?>
+                                    <p class="deja-note">Vous avez noté cette commande : <?php echo (int) $cmd['note']['note_produits']; ?>/5</p>
+                                <?php else : ?>
+                                    <a href="Avis.php?id=<?php echo $cmd['id']; ?>" class="btn-noter">Noter cette commande</a>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>

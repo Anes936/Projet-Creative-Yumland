@@ -109,6 +109,40 @@ main {
     color: #a85a52;
 }
 
+#reductions-box {
+    background-color: #fdf0ed;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #cc7061;
+}
+
+#reductions-box h3 {
+    color: #cc7061;
+    margin: 0 0 10px 0;
+    font-size: 1.05rem;
+}
+
+#reductions-box .ligne-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    color: #333;
+}
+
+#reductions-box .economie {
+    color: #2a8a3e;
+    font-weight: bold;
+}
+
+#reductions-box .total-economie {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #cc7061;
+    text-align: right;
+    color: #2a8a3e;
+}
+
 #total {
     text-align: right;
     font-size: 1.3em;

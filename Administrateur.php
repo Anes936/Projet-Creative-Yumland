@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
 
 if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     header("Location: Connexion.php");
@@ -33,6 +34,8 @@ function compterCommandes($identifiant, $commandes) {
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Administrateur.css">
     <title>Page Administrateur</title>
+    <script src="JS/theme.js" defer></script>
+    <script src="JS/admin.js" defer></script>
 </head>
 <body>
 
@@ -57,7 +60,8 @@ function compterCommandes($identifiant, $commandes) {
             </a>
         </div>
 
-       <div id="header-right">
+       <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>
@@ -95,7 +99,8 @@ function compterCommandes($identifiant, $commandes) {
                     <th>Actions</th>
                 </tr>
                 <?php foreach ($utilisateurs as $u) : ?>
-                    <tr>
+                    <?php $estBloque = !empty($u['bloque']); ?>
+                    <tr data-id-user="<?php echo htmlspecialchars($u['id']); ?>">
                         <td><?php echo htmlspecialchars($u['id']); ?></td>
                         <td><?php echo htmlspecialchars($u['nom'] . ' ' . $u['prenom']); ?></td>
                         <td><?php echo htmlspecialchars($u['mail']); ?></td>
@@ -103,8 +108,14 @@ function compterCommandes($identifiant, $commandes) {
                         <td><?php echo compterCommandes($u['identifiant'], $commandes); ?></td>
                         <td>
                             <a href="ProfilAdmin.php?id=<?php echo $u['id']; ?>" class="btn-voir">Voir le profil</a>
-                            <button class="btn-bloquer">Bloquer</button>
-                            <button class="btn-statut">Premium</button>
+                            <button class="btn-bloquer"
+                                    data-id="<?php echo htmlspecialchars($u['id']); ?>"
+                                    data-bloque="<?php echo $estBloque ? '1' : '0'; ?>">
+                                <?php echo $estBloque ? 'Débloquer' : 'Bloquer'; ?>
+                            </button>
+                            <span class="etat-bloque" style="margin-left:8px; font-size:0.85rem; color:#c0392b;">
+                                <?php echo $estBloque ? '(bloqué)' : ''; ?>
+                            </span>
                         </td>
                     </tr>
                 <?php endforeach; ?>

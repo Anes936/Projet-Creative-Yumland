@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
 
 if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     header("Location: Connexion.php");
@@ -34,6 +35,7 @@ foreach ($utilisateurs as $u) {
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Livraison.css">
     <title>Mes Livraisons</title>
+    <script src="JS/theme.js" defer></script>
 </head>
 <body>
 
@@ -51,7 +53,8 @@ foreach ($utilisateurs as $u) {
             </a>
         </div>
 
-       <div id="header-right">
+       <button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
+<div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
             <a href="Administrateur.php" class="btn-espace">Espace Admin</a>

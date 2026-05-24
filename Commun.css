@@ -147,3 +147,61 @@ footer {
     background-color: #a85a52;
     text-decoration: none !important;
 }
+
+#btn-theme {
+    position: absolute;
+    right: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 12px;
+    background-color: #fbf6f2;
+    color: #cc7061;
+    border: 1px solid #cc7061;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-theme:hover {
+    background-color: #cc7061;
+    color: #fbf6f2;
+}
+
+.erreur {
+    display: block;
+    color: #c0392b;
+    font-size: 0.85rem;
+    margin: 4px 0 8px 0;
+    font-weight: bold;
+}
+
+.champ-invalide {
+    border-color: #c0392b !important;
+    background-color: #fff3f2 !important;
+}
+
+.btn-oeil {
+    background: none;
+    border: 1px solid #cc7061;
+    color: #cc7061;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-left: 6px;
+    margin-bottom: 8px;
+}
+
+.btn-oeil:hover {
+    background-color: #cc7061;
+    color: white;
+}
+
+.compteur {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin: 2px 0 8px 0;
+    text-align: right;
+}

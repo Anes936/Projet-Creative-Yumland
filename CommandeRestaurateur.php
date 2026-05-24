@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . "/Traitements/securite.php";
 
 if (!isset($_SESSION['connecte']) || !$_SESSION['connecte']) {
     header("Location: Connexion.php");
@@ -24,17 +25,19 @@ foreach ($utilisateurs as $u) {
     }
 }
 
-$aPrep = [];
-$enCours = [];
+$payees      = [];
+$enPrep      = [];
+$pretes      = [];
 $enLivraison = [];
-$livrees = [];
+$livrees     = [];
 
 foreach ($commandes as $cmd) {
     switch ($cmd['statut']) {
-        case 'en_preparation': $aPrep[] = $cmd; break;
-        case 'en_cours': $enCours[] = $cmd; break;
-        case 'en_livraison': $enLivraison[] = $cmd; break;
-        case 'livree': $livrees[] = $cmd; break;
+        case 'payee':          $payees[]      = $cmd; break;
+        case 'en_preparation': $enPrep[]      = $cmd; break;
+        case 'prete':          $pretes[]      = $cmd; break;
+        case 'en_livraison':   $enLivraison[] = $cmd; break;
+        case 'livree':         $livrees[]     = $cmd; break;
     }
 }
 ?>
@@ -44,6 +47,7 @@ foreach ($commandes as $cmd) {
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="CommandeRestaurateur.css">
     <title>Gestion des Commandes</title>
+    <script src="JS/theme.js" defer></script>
 </head>
 <body>
 
@@ -68,6 +72,7 @@ foreach ($commandes as $cmd) {
             </a>
         </div>
         
+<button type="button" id="btn-theme" class="btn-theme">Mode sombre</button>
 <div id="header-right">
     <?php if (isset($_SESSION['connecte']) && $_SESSION['connecte']) : ?>
         <?php if ($_SESSION['role'] === 'admin') : ?>
@@ -94,11 +99,11 @@ foreach ($commandes as $cmd) {
 
             <h1>Gestion des Commandes</h1>
 
-            <h2>Commandes à préparer</h2>
-            <?php if (empty($aPrep)) : ?>
-                <p class="aucune">Aucune commande à préparer.</p>
+            <h2>Commandes payées (à démarrer)</h2>
+            <?php if (empty($payees)) : ?>
+                <p class="aucune">Aucune commande payée en attente.</p>
             <?php else : ?>
-                <?php foreach ($aPrep as $cmd) : ?>
+                <?php foreach ($payees as $cmd) : ?>
                     <div class="commande">
                         <p><strong>Commande :</strong> <?php echo htmlspecialchars($cmd['id']); ?></p>
                         <p><strong>Client :</strong> <?php echo htmlspecialchars($cmd['nom_client']); ?></p>
@@ -113,14 +118,51 @@ foreach ($commandes as $cmd) {
                         <p><strong>Total :</strong> <?php echo number_format($cmd['total'], 2, ',', ''); ?> €</p>
                         <form action="Traitements/traitement_Restaurateur.php" method="POST" class="form-actions">
                             <input type="hidden" name="id_commande" value="<?php echo $cmd['id']; ?>">
+                            <input type="hidden" name="action" value="demarrer">
+                            <button type="submit" class="btn-prete">Démarrer la préparation</button>
+                        </form>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <h2>Commandes en préparation</h2>
+            <?php if (empty($enPrep)) : ?>
+                <p class="aucune">Aucune commande en préparation.</p>
+            <?php else : ?>
+                <?php foreach ($enPrep as $cmd) : ?>
+                    <div class="commande">
+                        <p><strong>Commande :</strong> <?php echo htmlspecialchars($cmd['id']); ?></p>
+                        <p><strong>Client :</strong> <?php echo htmlspecialchars($cmd['nom_client']); ?></p>
+                        <p><strong>Mode :</strong> <?php echo htmlspecialchars($cmd['mode']); ?></p>
+                        <p><strong>Total :</strong> <?php echo number_format($cmd['total'], 2, ',', ''); ?> €</p>
+                        <form action="Traitements/traitement_Restaurateur.php" method="POST" class="form-actions">
+                            <input type="hidden" name="id_commande" value="<?php echo $cmd['id']; ?>">
                             <input type="hidden" name="action" value="prete">
-                            <select name="livreur">
+                            <button type="submit" class="btn-prete">Marquer comme prête</button>
+                        </form>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <h2>Commandes prêtes (à assigner à un livreur)</h2>
+            <?php if (empty($pretes)) : ?>
+                <p class="aucune">Aucune commande prête à livrer.</p>
+            <?php else : ?>
+                <?php foreach ($pretes as $cmd) : ?>
+                    <div class="commande">
+                        <p><strong>Commande :</strong> <?php echo htmlspecialchars($cmd['id']); ?></p>
+                        <p><strong>Client :</strong> <?php echo htmlspecialchars($cmd['nom_client']); ?></p>
+                        <p><strong>Total :</strong> <?php echo number_format($cmd['total'], 2, ',', ''); ?> €</p>
+                        <form action="Traitements/traitement_Restaurateur.php" method="POST" class="form-actions">
+                            <input type="hidden" name="id_commande" value="<?php echo $cmd['id']; ?>">
+                            <input type="hidden" name="action" value="assigner">
+                            <select name="livreur" required>
                                 <option value="">Choisir un livreur</option>
                                 <?php foreach ($livreurs as $liv) : ?>
                                     <option value="<?php echo $liv['identifiant']; ?>"><?php echo htmlspecialchars($liv['prenom'] . ' ' . $liv['nom']); ?></option>
                                 <?php endforeach; ?>
                             </select>
-                            <button type="submit" class="btn-prete">Commande prête</button>
+                            <button type="submit" class="btn-prete">Assigner et lancer la livraison</button>
                         </form>
                     </div>
                 <?php endforeach; ?>
