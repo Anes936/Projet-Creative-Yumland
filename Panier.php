@@ -1,4 +1,5 @@
 <?php
+// Panier : récapitulatif des articles avant de passer commande.
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 require __DIR__ . "/Traitements/calcul_panier.php";
@@ -24,6 +25,7 @@ $economie = $calcul['economie'];
     <link rel="stylesheet" href="Panier.css">
     <title>Mon Panier</title>
     <script src="JS/theme.js" defer></script>
+    <script src="JS/recherche.js" defer></script>
 </head>
 <body>
 
@@ -33,13 +35,16 @@ $economie = $calcul['economie'];
             <a href="Panier.php" id="panier">
                 <img src="images/Panier.jpeg" alt="Panier">
             </a>
-            <form>
-                <label for="recherche"></label>
-                <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
-                <button>
-                    <img src="images/Rcherche.jpeg" alt="Loupe"/>
-                </button>
-            </form>
+            <div id="zone-recherche">
+                <form id="form-recherche">
+                    <label for="recherche"></label>
+                    <input type="text" id="recherche" autocomplete="off" placeholder="Qu'est ce qui vous ferait plaisir">
+                    <button type="submit">
+                        <img src="images/Rcherche.jpeg" alt="Loupe"/>
+                    </button>
+                </form>
+                <ul id="suggestions"></ul>
+            </div>
         </div>
 
         <div id="header-center">

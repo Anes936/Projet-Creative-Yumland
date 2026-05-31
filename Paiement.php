@@ -1,4 +1,5 @@
 <?php
+// Page de paiement : prépare la transaction puis redirige vers la plateforme CYBank.
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 

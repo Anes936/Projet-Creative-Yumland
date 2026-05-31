@@ -1,3 +1,4 @@
+// Compteur de caractères en temps réel pour les champs limités (mot de passe, avis, etc.).
 var LIMITES_PAR_DEFAUT = {
     "emdp":        20,
     "cmdp":        20,

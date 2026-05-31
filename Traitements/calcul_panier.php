@@ -1,9 +1,11 @@
 <?php
+// Calcule le total du panier en appliquant automatiquement les box (menus) dès que c'est possible.
 function calculerTotalPanier(array $panier, array $platsParId, array $menus): array
 {
     $platsRestants = $panier;
     $boxesAppliquees = [];
 
+    // Pour chaque box, on regarde combien de fois on peut la composer avec les plats du panier.
     foreach ($menus as $menu) {
         if (empty($menu['plats'])) {
             continue;

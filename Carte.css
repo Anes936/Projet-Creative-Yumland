@@ -1,3 +1,4 @@
+/* Page produits : mise en page des filtres, de la grille de plats, des box et des suggestions. */
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#fffaf5;
@@ -19,7 +20,7 @@ body{
 
 #blocrecherche,
 #bloccategorie,
-#blocregime,
+#blocgout,
 #blocsaveur{
     background:#fff;
     padding:14px;
@@ -30,7 +31,7 @@ body{
 
 #blocrecherche h4,
 #bloccategorie h4,
-#blocregime h4,
+#blocgout h4,
 #blocsaveur h4{
     margin:0 0 8px;
     font-size:0.95rem;
@@ -47,7 +48,7 @@ body{
 }
 
 #bloccategorie label,
-#blocregime label,
+#blocgout label,
 #blocsaveur label{
     display:block;
     margin:6px 0;

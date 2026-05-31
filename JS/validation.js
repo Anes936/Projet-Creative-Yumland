@@ -1,3 +1,4 @@
+// Validation des formulaires côté client : on vérifie chaque champ avant d'envoyer au serveur.
 function estVide(valeur) {
     return valeur.trim() === "";
 }
@@ -176,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// Petit bouton "œil" pour afficher ou masquer un mot de passe.
 function ajouterBoutonOeil(input) {
     var bouton = document.createElement("button");
     bouton.type = "button";

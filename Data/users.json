@@ -7,10 +7,10 @@
         "mail": "anes.oualid1@gmail.com",
         "tel": "",
         "adresse": {
-            "numero": "1",
-            "rue": "rue du Commerce",
-            "ville": "Paris",
-            "postal": "75015"
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
         },
         "identifiant": "Anes",
         "mdp": "$2y$12$sjVn1k80yYbgVQqkWcxhDOqySqGmudeQv7rApQNU0cIruFeGN9LA2",
@@ -24,12 +24,12 @@
         "prenom": "Utilisateur",
         "date": "2000-01-01",
         "mail": "utilisateur@gmail.com",
-        "tel": "0600000001",
+        "tel": "",
         "adresse": {
-            "numero": "1",
-            "rue": "rue de la Paix",
-            "ville": "Paris",
-            "postal": "75002"
+            "numero": "Avenue",
+            "rue": "du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
         },
         "identifiant": "Utilisateur",
         "mdp": "$2y$12$Y0tvACHOfbjl5omkt3fxs.l95jLOMtwaE5NmsiVv0U3Kcwvdd9K42",
@@ -45,10 +45,10 @@
         "mail": "restaurateur@gmail.com",
         "tel": "0678901234",
         "adresse": {
-            "numero": "15",
-            "rue": "rue du Four",
-            "ville": "Paris",
-            "postal": "75006"
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
         },
         "identifiant": "Restaurateur",
         "mdp": "$2y$12$pBmIkjsO7lJuqDC9EhAO5e6XUIwdqRUc7PIC5j0An.G70JvOmZssK",
@@ -64,10 +64,10 @@
         "mail": "livreur@gmail.com",
         "tel": "",
         "adresse": {
-            "numero": "22",
-            "rue": "rue de Belleville",
-            "ville": "Paris",
-            "postal": "75020"
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
         },
         "identifiant": "Livreur",
         "mdp": "$2y$12$WSBkw0hGV.PSk0ohualXwuy1jjLvy4HL87Ztc1lCtTPW.t8QM\/8BS",
@@ -83,14 +83,90 @@
         "mail": "admin@gmail.com",
         "tel": "",
         "adresse": {
-            "numero": "8",
-            "rue": "rue de Rivoli",
-            "ville": "Paris",
-            "postal": "75001"
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
         },
         "identifiant": "Admin",
         "mdp": "$2y$12$GiBIaV1kENm7wqdvWfjO1eHQyzx7N79jjyokW5gDlZQwma75gT79m",
         "role": "admin",
+        "points": 0,
+        "bloque": false
+    },
+    {
+        "id": "c002",
+        "nom": "Client",
+        "prenom": "1",
+        "date": "1998-03-12",
+        "mail": "client1@gmail.com",
+        "tel": "0611223344",
+        "adresse": {
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
+        },
+        "identifiant": "client1",
+        "mdp": "$2y$12$cXSC5LhiNu8Ufb4h\/rWpse10p8xk6d4oVaYv3eO8kKuF6RJgTmxYO",
+        "role": "client",
+        "points": 0,
+        "bloque": false
+    },
+    {
+        "id": "c003",
+        "nom": "Client",
+        "prenom": "2",
+        "date": "2001-09-30",
+        "mail": "client2@gmail.com",
+        "tel": "0622334455",
+        "adresse": {
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
+        },
+        "identifiant": "client2",
+        "mdp": "$2y$12$rtW\/7iglvs7.7t7wUbqnreEhftjhFdLMs2PB91YYsCDAH4uwLCS02",
+        "role": "client",
+        "points": 0,
+        "bloque": false
+    },
+    {
+        "id": "c004",
+        "nom": "Client",
+        "prenom": "3",
+        "date": "1995-11-08",
+        "mail": "client3@gmail.com",
+        "tel": "0633445566",
+        "adresse": {
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
+        },
+        "identifiant": "client3",
+        "mdp": "$2y$12$ILb37ERQ\/cnGgvUf7DNSi.tgqfcQDd3cNvgZUscEwOe501w6fcGB6",
+        "role": "client",
+        "points": 0,
+        "bloque": false
+    },
+    {
+        "id": "c005",
+        "nom": "Client",
+        "prenom": "4",
+        "date": "2003-06-21",
+        "mail": "client4@gmail.com",
+        "tel": "0644556677",
+        "adresse": {
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
+        },
+        "identifiant": "client4",
+        "mdp": "$2y$12$PvgA.A1hsXEoqlhSmxR5B.fXAnK9PJw6M6uPX.C5tCbfcF3ieJYku",
+        "role": "client",
         "points": 0,
         "bloque": false
     }

@@ -1,4 +1,5 @@
 <?php
+// Page produits (la carte) : box, plats, filtres, tri et recherche.
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 $plats = json_decode(file_get_contents('Data/plats.json'), true);
@@ -21,13 +22,16 @@ $menus = json_decode(file_get_contents('Data/menus.json'), true);
             <a href="Panier.php" id="panier">
                 <img src="images/Panier.jpeg" alt="Panier">
             </a>
-            <form>
-                <label for="recherche"></label>
-                <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
-                <button>
-                    <img src="images/Rcherche.jpeg" alt="Loupe"/>
-                </button>
-            </form>
+            <div id="zone-recherche">
+                <form id="form-recherche">
+                    <label for="recherche"></label>
+                    <input type="text" id="recherche" autocomplete="off" placeholder="Qu'est ce qui vous ferait plaisir">
+                    <button type="submit">
+                        <img src="images/Rcherche.jpeg" alt="Loupe"/>
+                    </button>
+                </form>
+                <ul id="suggestions"></ul>
+            </div>
         </div>
 
         <div id="header-center">
@@ -64,30 +68,18 @@ $menus = json_decode(file_get_contents('Data/menus.json'), true);
 
             <form id="bloccategorie">
                 <h4>Catégorie</h4>
-                <label><input type="checkbox" class="filtre-categorie" value="aperitifs"> Apéritifs</label>
-                <label><input type="checkbox" class="filtre-categorie" value="entrees"> Entrées</label>
-                <label><input type="checkbox" class="filtre-categorie" value="plats"> Plats</label>
-                <label><input type="checkbox" class="filtre-categorie" value="fromages"> Fromages</label>
-                <label><input type="checkbox" class="filtre-categorie" value="desserts"> Desserts</label>
-                <label><input type="checkbox" class="filtre-categorie" value="croissanterie"> Croissanterie</label>
-                <label><input type="checkbox" class="filtre-categorie" value="boissons"> Boissons</label>
+                <label><input type="checkbox" class="filtre-categorie" value="viennoiseries"> Viennoiseries</label>
+                <label><input type="checkbox" class="filtre-categorie" value="patisseries"> Pâtisseries</label>
+                <label><input type="checkbox" class="filtre-categorie" value="tartes"> Tartes</label>
+                <label><input type="checkbox" class="filtre-categorie" value="cookies"> Cookies</label>
             </form>
 
-            <form id="blocregime">
-                <h4>Régime</h4>
-                <label><input type="checkbox" class="filtre-regime" value="vegetarien"> Végétarien</label>
-                <label><input type="checkbox" class="filtre-regime" value="vegan"> Vegan</label>
-                <label><input type="checkbox" class="filtre-regime" value="halal"> Halal</label>
-                <label><input type="checkbox" class="filtre-regime" value="sans_gluten"> Sans gluten</label>
-                <label><input type="checkbox" class="filtre-regime" value="sans_lactose"> Sans lactose</label>
-                <label><input type="checkbox" class="filtre-regime" value="sans_oeuf"> Sans œuf</label>
-            </form>
-
-            <form id="blocsaveur">
-                <h4>Saveurs</h4>
-                <label><input type="checkbox" class="filtre-saveur" value="sale"> Salé</label>
-                <label><input type="checkbox" class="filtre-saveur" value="sucre"> Sucré</label>
-                <label><input type="checkbox" class="filtre-saveur" value="epice"> Épicé</label>
+            <form id="blocgout">
+                <h4>Goûts</h4>
+                <label><input type="checkbox" class="filtre-gout" value="chocolat"> Chocolat</label>
+                <label><input type="checkbox" class="filtre-gout" value="fruit"> Fruit</label>
+                <label><input type="checkbox" class="filtre-gout" value="praline"> Praliné</label>
+                <label><input type="checkbox" class="filtre-gout" value="vanille"> Vanille</label>
             </form>
 
         </aside>

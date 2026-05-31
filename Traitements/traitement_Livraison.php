@@ -1,4 +1,5 @@
 <?php
+// Livreur : marque une livraison comme effectuée ou abandonnée.
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

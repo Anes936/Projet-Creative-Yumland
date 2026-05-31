@@ -1,4 +1,5 @@
 <?php
+// Espace administrateur : liste des utilisateurs et blocage des comptes.
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 
@@ -35,6 +36,7 @@ function compterCommandes($identifiant, $commandes) {
     <link rel="stylesheet" href="Administrateur.css">
     <title>Page Administrateur</title>
     <script src="JS/theme.js" defer></script>
+    <script src="JS/recherche.js" defer></script>
     <script src="JS/admin.js" defer></script>
 </head>
 <body>
@@ -45,13 +47,16 @@ function compterCommandes($identifiant, $commandes) {
             <a href="Panier.php" id="panier">
                 <img src="images/Panier.jpeg" alt="Panier">
             </a>
-            <form>
-                <label for="recherche"></label>
-                <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
-                <button>
-                    <img src="images/Rcherche.jpeg" alt="Loupe"/>
-                </button>
-            </form>
+            <div id="zone-recherche">
+                <form id="form-recherche">
+                    <label for="recherche"></label>
+                    <input type="text" id="recherche" autocomplete="off" placeholder="Qu'est ce qui vous ferait plaisir">
+                    <button type="submit">
+                        <img src="images/Rcherche.jpeg" alt="Loupe"/>
+                    </button>
+                </form>
+                <ul id="suggestions"></ul>
+            </div>
         </div>
 
         <div id="header-center">

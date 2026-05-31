@@ -1,3 +1,4 @@
+// Thème clair / sombre : on garde le choix dans un cookie pour le réappliquer à chaque page.
 function ecrireCookie(nom, valeur, jours) {
     var date = new Date();
     date.setTime(date.getTime() + (jours * 24 * 60 * 60 * 1000));
@@ -65,6 +66,7 @@ function appliquerThemeDepuisCookie() {
     }
 }
 
+// Clic sur le bouton : on inverse le thème et on met à jour le cookie.
 function basculerTheme() {
     var choix = lireCookie("theme");
     if (choix === "sombre") {

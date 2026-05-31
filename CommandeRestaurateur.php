@@ -1,4 +1,5 @@
 <?php
+// Espace restaurateur : commandes à préparer, prêtes, et assignation aux livreurs.
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 
@@ -48,6 +49,7 @@ foreach ($commandes as $cmd) {
     <link rel="stylesheet" href="CommandeRestaurateur.css">
     <title>Gestion des Commandes</title>
     <script src="JS/theme.js" defer></script>
+    <script src="JS/recherche.js" defer></script>
 </head>
 <body>
 
@@ -57,13 +59,16 @@ foreach ($commandes as $cmd) {
             <a href="Panier.php" id="panier">
                 <img src="images/Panier.jpeg" alt="Panier">
             </a>
-            <form>
-                <label for="recherche"></label>
-                <input type="text" id="recherche" placeholder="Qu'est ce qui vous ferait plaisir">
-                <button>
-                    <img src="images/Rcherche.jpeg" alt="Loupe"/>
-                </button>
-            </form>
+            <div id="zone-recherche">
+                <form id="form-recherche">
+                    <label for="recherche"></label>
+                    <input type="text" id="recherche" autocomplete="off" placeholder="Qu'est ce qui vous ferait plaisir">
+                    <button type="submit">
+                        <img src="images/Rcherche.jpeg" alt="Loupe"/>
+                    </button>
+                </form>
+                <ul id="suggestions"></ul>
+            </div>
         </div>
 
         <div id="header-center">

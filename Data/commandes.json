@@ -236,5 +236,31 @@
         "statut": "en_attente_paiement",
         "livreur": "",
         "date_commande": "2026-05-24 12:18:34"
+    },
+    {
+        "id": "CMD-6A1C075F1E958",
+        "client": "Utilisateur",
+        "nom_client": "Utilisateur Utilisateur",
+        "articles": [
+            {
+                "id": "p015",
+                "nom": "Paris Brest",
+                "prix": 5.5,
+                "qte": 1
+            }
+        ],
+        "boxes": [],
+        "total": 5.5,
+        "mode": "surplace",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "Avenue",
+            "rue": "du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-05-31 10:03:11"
     }
 ]

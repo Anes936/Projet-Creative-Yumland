@@ -1,4 +1,5 @@
 <?php
+// Panier : ajout / suppression / modification des articles, gardés dans la session.
 session_start();
 
 if (!isset($_SESSION['panier'])) {

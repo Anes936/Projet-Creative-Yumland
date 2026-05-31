@@ -1,3 +1,4 @@
+/* Thème sombre : surcharge les couleurs lorsque le mode sombre est activé (chargé par theme.js). */
 body {
     background-image: url('images/fond.sombree.jpg');
     background-color: #1f1e1d;
@@ -84,12 +85,27 @@ p, label, span {
 #blocinfos, #bloccommandes, #blocfidelite,
 .article, .commande, .livraison,
 #resume, #mode, #adresse, #creneau,
-#blocrecherche, #bloccategorie, #blocregime, #blocsaveur,
+#bloccategorie, #blocgout,
 .gateau, .box, #avistitre,
 .gateau1, .gateau2, .gateau3 {
     background-color: #3a3633 !important;
     border-color: #4a4441 !important;
     color: #ece8e3;
+}
+
+#suggestions {
+    background: #2b2826;
+    border-color: #4a4441;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+#suggestions li {
+    color: #ece8e3;
+}
+
+#suggestions li:hover {
+    background: #4a4441;
+    color: #f0a596;
 }
 
 .gateau1, .gateau2, .gateau3 {

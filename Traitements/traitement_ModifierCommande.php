@@ -1,4 +1,5 @@
 <?php
+// Modification d'une commande payée : on recalcule le total et on gère l'éventuel supplément.
 session_start();
 header('Content-Type: application/json; charset=utf-8');
 
@@ -63,6 +64,7 @@ foreach ($nouveauxArticles as $art) {
 $commandes[$indexCommande]['articles'] = $articlesComplets;
 $commandes[$indexCommande]['total']    = $nouveauTotal;
 
+// Si la commande coûte plus cher qu'avant, le client doit payer la différence.
 $difference = $nouveauTotal - $ancienTotal;
 $paiementSupp = false;
 

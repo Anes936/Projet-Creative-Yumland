@@ -1,4 +1,5 @@
 <?php
+// Modification d'une commande déjà payée (ajout / retrait de produits).
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 

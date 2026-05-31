@@ -1,3 +1,4 @@
+/* Styles communs à toutes les pages : header, footer, barre de recherche, formulaires. */
 *{
   box-sizing:border-box;
   margin:0;
@@ -62,6 +63,43 @@ header {
 #header-left button img {
   width: 35px;
   height: 35px;
+}
+
+#zone-recherche {
+  position: relative;
+}
+
+#suggestions {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  margin: 4px 0 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #e8cfc6;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+#suggestions:empty {
+  display: none;
+}
+
+#suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+#suggestions li:hover {
+  background: #f5e9e4;
+  color: #a85a52;
 }
 
 #header-center {

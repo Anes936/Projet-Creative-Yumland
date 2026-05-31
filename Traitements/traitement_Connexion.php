@@ -1,4 +1,5 @@
 <?php
+// Connexion : on vérifie l'identifiant/email et le mot de passe, puis on ouvre la session.
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -32,6 +33,7 @@ if ($utilisateur_trouve === null) {
     exit;
 }
 
+// Le mot de passe est haché en base, on le compare avec password_verify.
 if (!password_verify($mdp, $utilisateur_trouve['mdp'])) {
     echo "Mot de passe incorrect.";
     exit;

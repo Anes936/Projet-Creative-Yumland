@@ -1,4 +1,5 @@
 <?php
+// Validation de la commande : on transforme le panier en commande puis on part au paiement.
 session_start();
 require __DIR__ . '/calcul_panier.php';
 

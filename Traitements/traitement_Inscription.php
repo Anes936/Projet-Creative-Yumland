@@ -1,4 +1,5 @@
 <?php
+// Inscription : on crée un nouveau client (mot de passe haché) puis on le connecte directement.
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

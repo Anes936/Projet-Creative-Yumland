@@ -1,4 +1,5 @@
 <?php
+// Notation d'une commande livrée (une seule note possible par commande).
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

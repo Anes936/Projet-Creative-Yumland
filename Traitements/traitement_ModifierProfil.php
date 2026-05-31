@@ -1,4 +1,5 @@
 <?php
+// Mise à jour du profil (reçoit le JSON envoyé en asynchrone par profil.js).
 session_start();
 header('Content-Type: application/json; charset=utf-8');
 

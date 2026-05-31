@@ -1,3 +1,4 @@
+// Modification d'une commande déjà payée : on ajoute / retire des produits et on recalcule le total.
 document.addEventListener("DOMContentLoaded", function () {
 
     var liste = document.getElementById("liste-articles");
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var infoDiff = document.getElementById("info-difference");
     var message = document.getElementById("message-modif-cmd");
 
+    // Recalcule le total et indique s'il faudra payer un supplément.
     function recalculerTotal() {
         var lignes = liste.querySelectorAll(".ligne-article");
         var total = 0;

@@ -1,4 +1,5 @@
 <?php
+// Espace livreur : détails de la commande assignée et validation de la livraison.
 session_start();
 require __DIR__ . "/Traitements/securite.php";
 

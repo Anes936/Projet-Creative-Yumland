@@ -1,12 +1,16 @@
+// Page produits : filtres, tri et recherche instantanée, le tout sans recharger la page.
 document.addEventListener("DOMContentLoaded", function () {
 
     var grille = document.getElementById("blocgrille");
     if (!grille) return;
 
     var checkCategories = document.querySelectorAll(".filtre-categorie");
-    var checkRegimes    = document.querySelectorAll(".filtre-regime");
-    var checkSaveurs    = document.querySelectorAll(".filtre-saveur");
+    var checkGouts      = document.querySelectorAll(".filtre-gout");
     var selectTri       = document.getElementById("tri");
+
+    var champRecherche   = document.getElementById("recherche");
+    var formRecherche    = document.getElementById("form-recherche");
+    var boiteSuggestions = document.getElementById("suggestions");
 
     function valeursCochees(listeCheck) {
         var valeurs = [];
@@ -18,19 +22,27 @@ document.addEventListener("DOMContentLoaded", function () {
         return valeurs;
     }
 
-    function appliquerFiltres() {
+    // On envoie les filtres + la recherche au serveur, puis on réaffiche la grille avec sa réponse.
+    function appliquerFiltres(montrerSuggestions) {
         var cats = valeursCochees(checkCategories).join(",");
-        var regs = valeursCochees(checkRegimes).join(",");
-        var savs = valeursCochees(checkSaveurs).join(",");
+        var gts  = valeursCochees(checkGouts).join(",");
+        var texte = champRecherche ? champRecherche.value.trim() : "";
 
         var url = "Traitements/traitement_FiltrerPlats.php"
                 + "?categories=" + encodeURIComponent(cats)
-                + "&regimes="    + encodeURIComponent(regs)
-                + "&saveurs="    + encodeURIComponent(savs);
+                + "&gouts="      + encodeURIComponent(gts)
+                + "&recherche="  + encodeURIComponent(texte);
 
         fetch(url)
             .then(function (reponse) { return reponse.json(); })
-            .then(function (plats)  { remplirGrille(plats); })
+            .then(function (plats)  {
+                remplirGrille(plats);
+                if (montrerSuggestions && texte !== "") {
+                    remplirSuggestions(plats);
+                } else {
+                    viderSuggestions();
+                }
+            })
             .catch(function () {
                 grille.innerHTML = "<p>Erreur lors du chargement des produits.</p>";
             });
@@ -77,14 +89,59 @@ document.addEventListener("DOMContentLoaded", function () {
         appliquerTri();
     }
 
+    function viderSuggestions() {
+        if (boiteSuggestions) {
+            boiteSuggestions.innerHTML = "";
+        }
+    }
+
+    function remplirSuggestions(plats) {
+        if (!boiteSuggestions) return;
+        boiteSuggestions.innerHTML = "";
+        for (var i = 0; i < plats.length; i++) {
+            var ligne = document.createElement("li");
+            ligne.textContent = plats[i].nom;
+            ligne.addEventListener("click", choisirSuggestion(plats[i].nom));
+            boiteSuggestions.appendChild(ligne);
+        }
+    }
+
+    function choisirSuggestion(nom) {
+        return function () {
+            champRecherche.value = nom;
+            appliquerFiltres(false);
+            grille.scrollIntoView({ behavior: "smooth" });
+        };
+    }
+
     function brancherFiltres(liste) {
         for (var i = 0; i < liste.length; i++) {
-            liste[i].addEventListener("change", appliquerFiltres);
+            liste[i].addEventListener("change", function () {
+                appliquerFiltres(false);
+            });
         }
     }
     brancherFiltres(checkCategories);
-    brancherFiltres(checkRegimes);
-    brancherFiltres(checkSaveurs);
+    brancherFiltres(checkGouts);
+
+    if (champRecherche) {
+        champRecherche.addEventListener("input", function () {
+            appliquerFiltres(true);
+        });
+    }
+
+    if (formRecherche) {
+        formRecherche.addEventListener("submit", function (evenement) {
+            evenement.preventDefault();
+        });
+    }
+
+    document.addEventListener("click", function (evenement) {
+        var zone = document.getElementById("zone-recherche");
+        if (zone && !zone.contains(evenement.target)) {
+            viderSuggestions();
+        }
+    });
 
     function appliquerTri() {
         var critere = selectTri.value;
@@ -111,6 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (selectTri) {
         selectTri.addEventListener("change", appliquerTri);
+    }
+
+    // Si on arrive depuis une autre page (clic sur une suggestion), on filtre direct sur le plat.
+    var params = new URLSearchParams(window.location.search);
+    var rechercheInitiale = params.get("recherche");
+    if (rechercheInitiale && champRecherche) {
+        champRecherche.value = rechercheInitiale;
+        appliquerFiltres(false);
     }
 
 });

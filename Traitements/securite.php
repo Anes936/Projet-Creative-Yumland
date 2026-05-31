@@ -1,4 +1,5 @@
 <?php
+// Inclus en tête des pages protégées : déconnecte aussitôt un compte qui vient d'être bloqué.
 if (isset($_SESSION['connecte']) && $_SESSION['connecte']) {
     $cheminUsers = __DIR__ . '/../Data/users.json';
     if (file_exists($cheminUsers)) {

@@ -1,4 +1,5 @@
 <?php
+// Retour de la plateforme CYBank : on met à jour le statut de la commande selon le paiement.
 session_start();
 
 require('Traitements/getapikey.php');

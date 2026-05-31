@@ -1,4 +1,5 @@
 <?php
+// Admin : bloque ou débloque un compte (appelé en asynchrone par admin.js).
 session_start();
 header('Content-Type: application/json; charset=utf-8');
 

@@ -1,3 +1,4 @@
+// Profil : on bascule les infos en champs modifiables, puis on les envoie au serveur en asynchrone.
 document.addEventListener("DOMContentLoaded", function () {
 
     var boutonModifier = document.getElementById("btn-modifier-infos");
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Envoi des nouvelles infos au serveur, sans recharger la page.
     function envoyerModifications() {
         var inputs = document.querySelectorAll(".input-edition");
         var donnees = {};

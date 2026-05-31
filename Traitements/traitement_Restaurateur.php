@@ -1,4 +1,5 @@
 <?php
+// Restaurateur : fait avancer le statut d'une commande et l'assigne à un livreur.
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

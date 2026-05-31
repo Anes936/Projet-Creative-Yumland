@@ -1,3 +1,4 @@
+// Espace admin : blocage / déblocage d'un compte en asynchrone (le bouton se met à jour sur place).
 document.addEventListener("DOMContentLoaded", function () {
 
     var boutons = document.querySelectorAll(".btn-bloquer");
