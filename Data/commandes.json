@@ -262,5 +262,52 @@
         "statut": "en_attente_paiement",
         "livreur": "",
         "date_commande": "2026-05-31 10:03:11"
+    },
+    {
+        "id": "CMD-6A1C29C6A2BF1",
+        "client": "Restaurateur",
+        "nom_client": "Restaurateur Restaurateur",
+        "articles": [
+            {
+                "id": "p001",
+                "nom": "Flan vanille",
+                "prix": 4.5,
+                "qte": 1
+            },
+            {
+                "id": "p002",
+                "nom": "Fondant au chocolat",
+                "prix": 4,
+                "qte": 1
+            },
+            {
+                "id": "p011",
+                "nom": "Eclair au chocolat",
+                "prix": 4.5,
+                "qte": 1
+            }
+        ],
+        "boxes": [
+            {
+                "id": "m002",
+                "nom": "Box Découverte",
+                "nb": 1,
+                "prix_box": 10.75,
+                "prix_initial": 13,
+                "economie": 2.25
+            }
+        ],
+        "total": 10.75,
+        "mode": "livraison",
+        "creneau": "Dès que possible",
+        "adresse": {
+            "numero": "",
+            "rue": "Avenue du Parc",
+            "ville": "Cergy",
+            "postal": "95011"
+        },
+        "statut": "en_attente_paiement",
+        "livreur": "",
+        "date_commande": "2026-05-31 12:29:58"
     }
 ]

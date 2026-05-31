@@ -34,6 +34,8 @@ $plats = json_decode(file_get_contents('Data/plats.json'), true);
 <!doctype html>
 <html>
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png"/>
+    <link rel="apple-touch-icon" sizes="32x32" href="images/logo.png">
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Panier.css">
     <title>Modifier ma commande</title>

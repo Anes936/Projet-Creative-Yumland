@@ -45,6 +45,8 @@ foreach ($commandes as $cmd) {
 <!doctype html>
 <html>
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png"/>
+    <link rel="apple-touch-icon" sizes="32x32" href="images/logo.png">
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="CommandeRestaurateur.css">
     <title>Gestion des Commandes</title>

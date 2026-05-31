@@ -5,6 +5,8 @@ session_start();
 <!doctype html>
 <html>
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png"/>
+    <link rel="apple-touch-icon" sizes="32x32" href="images/logo.png">
     <link rel="stylesheet" type="text/css" href="Connexion.css"/>
     <link rel="stylesheet" href="Commun.css">
     <title>Page de Connexion</title>

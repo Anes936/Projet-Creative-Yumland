@@ -43,6 +43,8 @@ if (file_exists('Data/commandes.json')) {
 <!doctype html>
 <html>
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png"/>
+    <link rel="apple-touch-icon" sizes="32x32" href="images/logo.png">
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Profil.css">
     <title>Profil Administrateur <?php echo htmlspecialchars($user['nom']); ?></title>

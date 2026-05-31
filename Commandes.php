@@ -38,6 +38,8 @@ $economie = $calcul['economie'];
 <!doctype html>
 <html>
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png"/>
+    <link rel="apple-touch-icon" sizes="32x32" href="images/logo.png">
     <link rel="stylesheet" href="Commun.css">
     <link rel="stylesheet" href="Commandes.css">
     <title>Valider ma commande</title>

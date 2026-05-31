@@ -70,7 +70,7 @@
             "postal": "95011"
         },
         "identifiant": "Livreur",
-        "mdp": "$2y$12$WSBkw0hGV.PSk0ohualXwuy1jjLvy4HL87Ztc1lCtTPW.t8QM\/8BS",
+        "mdp": "$2y$12$WSBkw0hGV.PSk0ohualXwuy1jjLvy4HL87Ztc1lCtTPW.t8QM/8BS",
         "role": "livreur",
         "points": 0,
         "bloque": false
@@ -108,7 +108,7 @@
             "postal": "95011"
         },
         "identifiant": "client1",
-        "mdp": "$2y$12$cXSC5LhiNu8Ufb4h\/rWpse10p8xk6d4oVaYv3eO8kKuF6RJgTmxYO",
+        "mdp": "$2y$12$M3Yxd44Q1ZHlWLesRrOAHONJCLAjEXWHekMYFvYTgpY3AUDJKZbY6",
         "role": "client",
         "points": 0,
         "bloque": false
@@ -127,7 +127,7 @@
             "postal": "95011"
         },
         "identifiant": "client2",
-        "mdp": "$2y$12$rtW\/7iglvs7.7t7wUbqnreEhftjhFdLMs2PB91YYsCDAH4uwLCS02",
+        "mdp": "$2y$12$8dHNxYNrXZZCXJ..TFWDq.QxyhYMcN2reckPbU0.hT3ObiUDr0XqK",
         "role": "client",
         "points": 0,
         "bloque": false
@@ -146,7 +146,7 @@
             "postal": "95011"
         },
         "identifiant": "client3",
-        "mdp": "$2y$12$ILb37ERQ\/cnGgvUf7DNSi.tgqfcQDd3cNvgZUscEwOe501w6fcGB6",
+        "mdp": "$2y$12$MVubkAkO5sRaORrjzyRQD.9YA0mDoykCXae0UQFXsF/uu2TB/jZra",
         "role": "client",
         "points": 0,
         "bloque": false
@@ -165,7 +165,7 @@
             "postal": "95011"
         },
         "identifiant": "client4",
-        "mdp": "$2y$12$PvgA.A1hsXEoqlhSmxR5B.fXAnK9PJw6M6uPX.C5tCbfcF3ieJYku",
+        "mdp": "$2y$12$nvakBglYqx5oGZ7Uy74BAeH.EL9vU/oWqzp6BKl5sUxUOQdXVa1Om",
         "role": "client",
         "points": 0,
         "bloque": false
